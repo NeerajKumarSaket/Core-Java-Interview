@@ -1,4 +1,4 @@
-Core Java Interview Questions
+Core Java Interview Questions SRC- https://javacody.com/top-60-java-interview-questions/
 1. What is Java and why is it so popular?
 Java is a versatile, class-based, object-oriented programming language developed by Sun Microsystems and now owned by Oracle.
 Its popularity stems from being platform-independent—“write once, run anywhere” via the Java Virtual Machine (JVM). 
@@ -32,6 +32,10 @@ Inheritance: Reusing code.
 Polymorphism: Multiple forms of a method.
 These pillars enable Java to build modular, maintainable, and scalable code, making it ideal for enterprise-level applications.
 
+5. What is the difference between overloading and overriding?
+Overloading: Defining multiple methods with the same name but different parameters within the same class.
+Overriding: Subclass provides a specific implementation of a method already defined in the parent class.
+Overloading happens at compile-time, while overriding occurs at runtime.
 
 
 
