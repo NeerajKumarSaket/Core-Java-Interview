@@ -4,31 +4,31 @@ Object-Oriented Programming (OOP) is a programming paradigm based on the concept
 These objects represent real-world entities like cars, books, or students.
 
 Think about your mobile phone. It has properties like brand, model, and color. It also has behaviors like making calls or playing music. In programming, these properties and behaviors are combined to form objects.
-
 Java is one of the most powerful languages that uses OOP principles to make your programs modular, reusable, and maintainable.
 
 Why Use OOP in Java?
-Real-world modeling
-Better code organization
-Easier maintenance
-Code reusability
-Security with encapsulation
-Main OOP Concepts in Java Tutorial
-Class and Object
-Encapsulation
-Inheritance
-Polymorphism
-Abstraction
+
+- Real-world modeling
+- Better code organization
+- Easier maintenance
+- Code reusability
+- Security with encapsulation
+
+Main OOP Concepts in Java Tutorial?
+- Class and Object
+- Encapsulation
+- Inheritance
+- Polymorphism
+- Abstraction
 Let’s explore each one with simple examples.
 
 1. Class and Object in Java (Deep Dive)
 What is a Class?
-A class in Java is a user-defined blueprint or prototype from which objects are created. It represents a set of properties (fields) and behaviors (methods) that the object can have.
+A class in Java is a user-defined blueprint or prototype from which objects are created.
+It represents a set of properties (fields) and behaviors (methods) that the object can have.
 
 Think of a class as a blueprint of a house—you can create multiple houses (objects) from the same blueprint, each having its own identity but based on the same structure.
-
 Syntax:
-Copy
 class Person {
     String name;
     int age;
@@ -41,7 +41,6 @@ What is an Object?
 An object is an instance of a class. When a class is defined, no memory is allocated until an object is created from it.
 
 Object Creation Example:
-Copy
 public class Main {
     public static void main(String[] args) {
         Person p1 = new Person();  // Object created
@@ -62,7 +61,6 @@ This is done using:
 Private variables
 Public getter and setter methods
 Code Example:
-Copy
 class Student {
     private String name;
     private int marks;
@@ -85,6 +83,7 @@ class Student {
         return marks;
     }
 }
+
 Why is Encapsulation Important?
 Protects the data from accidental corruption
 Encourages code modularity
@@ -92,12 +91,12 @@ Improves security and control
 Real-World Analogy:
 Think of a medicine capsule—the components inside are hidden, but the whole unit is delivered together. That’s encapsulation!
 
-3. Inheritance in Java (In-Depth)
+3. Inheritance in Java 
 What is Inheritance?
-Inheritance is a mechanism in Java by which one class can inherit fields and methods from another class. It promotes code reuse and establishes a parent-child relationship.
+Inheritance is a mechanism in Java by which one class can inherit fields and methods from another class. 
+It promotes code reuse and establishes a parent-child relationship.
 
 Syntax:
-Copy
 class Animal {
     void breathe() {
         System.out.println("This animal breathes air.");
@@ -110,7 +109,6 @@ class Dog extends Animal {
     }
 }
 Code Usage:
-Copy
 public class Main {
     public static void main(String[] args) {
         Dog d = new Dog();
@@ -119,9 +117,9 @@ public class Main {
     }
 }
 Types of Inheritance:
-Single Inheritance
-Multilevel Inheritance
-Hierarchical Inheritance
+1) Single Inheritance
+2) Multilevel Inheritance
+3) Hierarchical Inheritance
 Java does not support multiple inheritance with classes to avoid ambiguity but does support it using interfaces.
 
 Real-World Example:
