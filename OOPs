@@ -1,12 +1,7 @@
-OOP Concepts in Java Tutorial
-Are you struggling to understand Object-Oriented Programming in Java? Don’t worry—you’re not alone! Many beginners feel overwhelmed at first, but the good news is that this tutorial will help you learn OOP Concepts in Java step by step.
-
-In this article, I’ll walk you through OOP in Java with real-world examples, relatable analogies, and practical programs that you can start using right away.
-
-Let’s get started!
-
+OOP Concepts in Java Tutorial ===Ref--- https://javacody.com/oop-concepts-in-java-tutorial/
 What is Object-Oriented Programming (OOP)?
-Object-Oriented Programming (OOP) is a programming paradigm based on the concept of “objects”, which contain data and behavior. These objects represent real-world entities like cars, books, or students.
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of “objects”, which contain data and behavior. 
+These objects represent real-world entities like cars, books, or students.
 
 Think about your mobile phone. It has properties like brand, model, and color. It also has behaviors like making calls or playing music. In programming, these properties and behaviors are combined to form objects.
 
