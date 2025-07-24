@@ -1,4 +1,4 @@
-OOP Concepts in Java Tutorial ===Ref--- https://javacody.com/oop-concepts-in-java-tutorial/
+OOP Concepts in Java Tutorial Ref---> https://javacody.com/oop-concepts-in-java-tutorial/
 What is Object-Oriented Programming (OOP)?
 Object-Oriented Programming (OOP) is a programming paradigm based on the concept of “objects”, which contain data and behavior. 
 These objects represent real-world entities like cars, books, or students.
@@ -207,9 +207,6 @@ Polymorphism: Different payment methods – one method pay() but many forms
 Abstraction: Abstract Payment process class handles general logic, specific types handle card or wallet
 By structuring your program using OOP concepts, your code becomes organized, scalable, and easy to maintain.
 
-➡️ How to Set Java Path on Windows
-
-➡️ First Java Program Tutorial
 OOP Concepts in Java with Real-Life Example
 Let’s build a mini-project:
 Example:
@@ -238,12 +235,6 @@ public class TestVehicle {
     }
 }
 ✔️ This small program demonstrates abstraction, inheritance, and polymorphism together.
-
-Common Mistakes While Learning OOP Concepts in Java Tutorial
-❗ Trying to memorize without practicing
-❗ Ignoring real-world modeling
-❗ Avoiding encapsulation (leading to unmanageable code)
-❗ Misunderstanding static vs object concepts
 
 OOP Concepts in Java interview questions
 Difference between Overloading and Overriding?
@@ -306,6 +297,12 @@ What is Covariant Return Type?
 Answer:
 When overriding a method, the return type of the overriding method can be a subclass of the return type declared in the parent class.
 
+Constructor Chaining?
+---------------------
+-> When we call one constructor from another constructor it will form chain like flow structure. This is called as constructor chaining
+-> This can be achieved by using this() keyword or Creating Object in another constructor
+
+
 What is Object Cloning?
 Answer:
 Creating an exact copy of an object using the clone() method.
@@ -313,7 +310,11 @@ The class should implement Cloneable interface.
 
 Why is multiple inheritance not supported in Java?
 Answer:
-To avoid ambiguity (Diamond Problem). Instead, Java uses Interfaces to achieve multiple inheritance of type.
+To avoid ambiguity (Diamond Problem). 
+Note: Java classes does not support mulitple inheritance because of diamond problem
+diamond problem: Suppose we inherit a method from A->B->D  and Same method is inherited from A->C->D, then confusion from which parent class method is inherited to child class D.
+This is called as DIAMOND PROBLEM. Hence in java classes does not support multiple inheritance.
+Instead, Java uses Interfaces to achieve multiple inheritance.
 
 What is the difference between an abstract class and an interface in Java 8?
 Answer:
