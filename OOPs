@@ -241,11 +241,23 @@ Feature	Overloading	Overriding
 Definition	Same method name, different params	Same method signature, subclass
 Compile-time/Runtime	Compile-time	Runtime
 Example	add(int, int) vs. add(double, double)	toString() in Object class overridden in custom class
-What is an Interface and how is it different from Abstract Class?
-Feature	Interface	Abstract Class
-Methods	Only abstract (Java 8+: default/static allowed)	Abstract + concrete methods
-Multiple Inheritance	Supported	Not Supported
-Variables	public static final	Instance variables allowed
+
+Difference between interface & abstract class? or What is an Interface and how is it different from Abstract Class?
+-------------------------------------------------
+a. interface supports mulitple inheritance but abstract class does not support multiple inheritance
+b. All variables in an interface by default are final & static whereas inside abstract class we can create static/non static/final variables
+✅ Interface
+An interface is a blueprint of a class that contains abstract methods (i.e., methods without a body).
+From Java 8 onwards, interfaces can also contain default and static methods with implementations.
+Interfaces are used to define contracts or capabilities (e.g., Runnable, Serializable).
+A class implements an interface using the implements keyword.
+Multiple interfaces can be implemented by a single class (supports multiple inheritance).
+
+✅ Abstract Class
+An abstract class is a partially implemented class that can contain both abstract methods (without body) and concrete methods (with body).
+It can also have constructors, instance variables, and any type of method (static, final, private, etc.).
+A class extends an abstract class using the extends keyword.
+Only one abstract class can be extended by a subclass (does not support multiple inheritance).
 
 Can we Inherit Constructor?
 Answer: We cannot inherit constructor
