@@ -236,7 +236,6 @@ public class TestVehicle {
 }
 ✔️ This small program demonstrates abstraction, inheritance, and polymorphism together.
 
-OOP Concepts in Java interview questions
 Difference between Overloading and Overriding?
 Feature	Overloading	Overriding
 Definition	Same method name, different params	Same method signature, subclass
@@ -247,9 +246,12 @@ Feature	Interface	Abstract Class
 Methods	Only abstract (Java 8+: default/static allowed)	Abstract + concrete methods
 Multiple Inheritance	Supported	Not Supported
 Variables	public static final	Instance variables allowed
-Explain Aggregation with an example.
-Answer:
-Aggregation is a “Has-A” relationship with weaker association.
+
+Can we Inherit Constructor?
+Answer: We cannot inherit constructor
+
+Explain Aggregation with an example?
+Answer: Aggregation is a “Has-A” relationship with weaker association.
 
 Example: Department has multiple Employees.
 Copy
@@ -268,11 +270,11 @@ O – Open/Closed Principle
 L – Liskov Substitution Principle
 I – Interface Segregation Principle
 D – Dependency Inversion Principle
-What is the role of the super keyword in Java?
-Answer:
 
-Refers to the parent class constructor/method/field.
+What is the role of the super keyword in Java?
+Answer:Refers to the parent class constructor/method/field.
 Example: super() calls the superclass constructor.
+
 What is the role of this keyword in Java?
 Answer:
 Refers to the current instance of the class. Useful to resolve ambiguity between instance variables and parameters.
@@ -407,12 +409,10 @@ Example: A Teacher teaches Students.
 
 What is Composition in Java?
 Composition is a strong form of association where the existence of one class depends on the other. If the container object is destroyed, so are the contained objects. Also called a has-A relationship
-
 Example: A House has Rooms. Without the House, Rooms don’t exist.
 
 What is Aggregation in Java?
 Aggregation is a weaker form of association, where one class can exist independently of the other.
-
 Example: A Department has Teachers. Teachers can exist even if the Department is removed.
 
 What is Single Inheritance in Java?
