@@ -125,18 +125,16 @@ Java does not support multiple inheritance with classes to avoid ambiguity but d
 Real-World Example:
 A “Manager” class may inherit from an “Employee” class. Manager gets all common employee properties, like ID and salary, while adding unique behaviors like assigning tasks.
 
-4. Polymorphism in Java (In-Depth)
-What is Polymorphism?
+4. What is Polymorphism?
 Polymorphism means “many forms”. In Java, it allows one action to behave differently based on the object calling it.
 
 There are two types:
+1) Compile-time (Method Overloading)
+2) Runtime (Method Overriding)
 
-Compile-time (Method Overloading)
-Runtime (Method Overriding)
-Method Overloading (Compile-Time Polymorphism)
-Same method name, different parameters.
+1) Method Overloading (Compile-Time Polymorphism)
+   Same method name, different parameters.
 
-Copy
 class MathUtils {
     int add(int a, int b) {
         return a + b;
@@ -146,10 +144,9 @@ class MathUtils {
         return a + b;
     }
 }
-Method Overriding (Runtime Polymorphism)
-Subclass provides a specific implementation of a method already defined in its parent class. Same method name and same parameter list.
+2) Method Overriding (Runtime Polymorphism)
+   Subclass provides a specific implementation of a method already defined in its parent class. Same method name and same parameter list.
 
-Copy
 class Animal {
     void makeSound() {
         System.out.println("Animal makes a sound");
@@ -164,16 +161,14 @@ class Cat extends Animal {
 Real-World Analogy:
 A printer object might have one method: print(). But if it’s a LaserPrinter, it prints differently than an InkJetPrinter. Same interface, different behaviors = polymorphism.
 
-5. Abstraction in Java (In-Depth)
-What is Abstraction?
+5.What is Abstraction?
 Abstraction means showing only essential features and hiding the unnecessary details.
 
 Java supports abstraction using:
-
 Abstract Classes
 Interfaces
+
 Abstract Class Example:
-Copy
 abstract class Shape {
     abstract void draw();
 }
@@ -184,7 +179,6 @@ class Rectangle extends Shape {
     }
 }
 Interface Example:
-Copy
 interface Animal {
     void eat();
 }
@@ -194,6 +188,7 @@ class Cow implements Animal {
         System.out.println("Cow eats grass");
     }
 }
+
 When to Use Abstract Class vs Interface?
 Use abstract classes when some common implementation is shared.
 Use interfaces when you want to enforce a contract without implementation.
@@ -212,24 +207,12 @@ Polymorphism: Different payment methods – one method pay() but many forms
 Abstraction: Abstract Payment process class handles general logic, specific types handle card or wallet
 By structuring your program using OOP concepts, your code becomes organized, scalable, and easy to maintain.
 
-Getting Started with Java Setup
-Before diving deeper, you must install Java JDK on your machine.
-
-➡️ How to Install Java JDK Step by Step
-
 ➡️ How to Set Java Path on Windows
 
-Writing Your First Java Program
-If you are just starting out and wondering how to begin, check out this helpful guide:
-
 ➡️ First Java Program Tutorial
-
 OOP Concepts in Java with Real-Life Example
 Let’s build a mini-project:
-
 Example:
-
-Copy
 abstract class Vehicle {
     abstract void start();
 }
@@ -262,11 +245,6 @@ Common Mistakes While Learning OOP Concepts in Java Tutorial
 ❗ Avoiding encapsulation (leading to unmanageable code)
 ❗ Misunderstanding static vs object concepts
 
-How to Master OOP in Java Faster
-Build small projects (e.g., Library Management, Online Shopping)
-Focus on one concept at a time
-Read and rewrite code
-Join Java communities for help and support
 OOP Concepts in Java interview questions
 Difference between Overloading and Overriding?
 Feature	Overloading	Overriding
@@ -309,22 +287,20 @@ Answer:
 Refers to the current instance of the class. Useful to resolve ambiguity between instance variables and parameters.
 
 What is method hiding in Java?
-Answer:
-If a subclass defines a static method with the same signature as in parent class, it is called method hiding.
+Answer:If a subclass defines a static method with the same signature as in parent class, it is called method hiding.
 
 Only applicable to static methods.
 Explain Constructor Overloading.
 Answer:
 Having multiple constructors in a class with different parameter lists. Helps in creating objects in different ways.
 
-Copy
 class Person {
     Person() {}
     Person(String name) {}
 }
-Can we override a static method in Java?
-Answer:
-No. Static methods are class-level and not subject to runtime polymorphism. We can hide them but not override them.
+
+Can we override a static method in Java ?
+Answer:No. Static methods are class-level and not subject to runtime polymorphism. We can hide them but not override them.
 
 What is Covariant Return Type?
 Answer:
@@ -344,36 +320,34 @@ Answer:
 
 Abstract class can have both abstract and concrete methods; interfaces can have default and static methods (from Java 8).
 Interfaces support multiple inheritance; abstract classes don’t.
+
 Can we instantiate an abstract class?
-Answer:
-No. Abstract classes cannot be instantiated directly. They must be subclassed, and their abstract methods implemented.
+Answer: No. Abstract classes cannot be instantiated directly. They must be subclassed, and their abstract methods implemented.
 
 What is constructor chaining in Java?
 Answer:
 Constructor chaining refers to calling one constructor from another within the same class using this() or from parent class using super().
 
 What is the default access modifier for a class in Java?
-Answer:
-If no access modifier is specified, the class has default (package-private) access
+Answer:If no access modifier is specified, the class has default (package-private) access
 
 What is final keyword in OOP concepts?
 Answer:
 final can be used with:
-
 Variables – Makes value constant.
 Methods – Prevents overriding.
 Classes – Prevents inheritance.
+
 What is a nested class in Java?
 Answer:
 A class defined inside another class. Types:
-
 Static nested class
 Inner class
 Local class
 Anonymous class
+
 Can a constructor be overridden in Java?
-Answer:
-No. Constructors cannot be overridden because they are not inherited.
+Answer: No. Constructors cannot be overridden because they are not inherited.
 
 What is multiple inheritance and how does Java solve it?
 Answer:
@@ -389,17 +363,17 @@ What is the difference between shallow copy and deep copy?
 Feature	Shallow Copy	Deep Copy
 Definition	Copies reference	Copies object and nested objects
 Default in Java	clone() (by default)	Custom implementation required
+
 What is the purpose of instanceof in Java?
 Answer:
 instanceof checks whether an object is an instance of a particular class or subclass.
 
 Frequently Asked Questions (FAQs) on OOP Concepts in Java Tutorial
 What is Inheritance in Java?
-Inheritance is one of the core OOP concepts in Java where one class acquires the properties (fields) and behaviors (methods) of another class. It helps with code reusability and maintains hierarchical relationships.
+Inheritance is one of the core OOP concepts in Java where one class acquires the properties (fields) and behaviors (methods) of another class. 
+It helps with code reusability and maintains hierarchical relationships.
 
 Example:
-
-Copy
 class Animal { }
 class Dog extends Animal { }
 What is Polymorphism in Java?
