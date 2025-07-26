@@ -62,9 +62,10 @@ new keyword:
 Syntax to create object:
 -------------------------
 ClassName variableName = new ClassName();
-What is Abstraction in Java?
-Abstraction is about hiding unnecessary implementation details from the user and showing only what’s relevant. In Java, you can achieve abstraction using abstract classes or interfaces.
-
+################################################
+Question : Can we Override static methods?
+-> We cannot override static methods, as we cannot inherit static methods
+########################################
 ================================================================Encapsulation===============================================================
 3) What is Encapsulation ?
 Encapsulation is the process of binding data and the methods that manipulate that data together, while keeping both safe from outside interference and misuse.
