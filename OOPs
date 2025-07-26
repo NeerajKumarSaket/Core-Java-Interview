@@ -192,7 +192,7 @@ class Cat extends Animal {
 Real-World Analogy:
 A printer object might have one method: print(). But if it’s a LaserPrinter, it prints differently than an InkJetPrinter. Same interface, different behaviors = polymorphism.
 
-8) What is Abstraction?
+8) What is Abstraction?OR  How to Achieve Abstraction in Java?
 Abstraction means showing only essential features and hiding the unnecessary details.
 Java supports abstraction using:
 Abstract Classes
