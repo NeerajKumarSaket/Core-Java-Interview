@@ -23,9 +23,12 @@ Pillers of oops
 
 Let’s explore each one with simple examples.
 1. Class and Object in Java
-What is a Class?
-A class in Java is a user-defined blueprint or prototype from which objects are created.
-It represents a set of properties (fields) and behaviors (methods) that the object can have.
+
+What is a Class in Java?
+A class in Java is a user-defined blueprint or prototype for creating objects. It contains variables (attributes) and methods (functions) that define the behavior of the objects.
+
+What is an Object in Java?
+An object is an instance of a class. It represents a real-world entity with state (data) and behavior (methods).
 
 Think of a class as a blueprint of a house—you can create multiple houses (objects) from the same blueprint, each having its own identity but based on the same structure.
 Syntax:
@@ -416,12 +419,6 @@ Polymorphism means many forms. It allows the same method to perform different be
 34) Compile-time polymorphism (Method Overloading)
 Runtime polymorphism (Method Overriding)
 
-
-What is a Class in Java?
-A class in Java is a template or blueprint for creating objects. It contains variables (attributes) and methods (functions) that define the behavior of the objects.
-
-What is an Object in Java?
-An object is an instance of a class. It represents a real-world entity with state (data) and behavior (methods).
 
 What is Association in Java?
 Association represents a relationship between two classes, where one class uses the functionalities of another class. It is represented as IS-A relationship
