@@ -61,8 +61,10 @@ Syntax to create object:
 ClassName variableName = new ClassName();
 
 
-3) What is Encapsulation?
+3) What is Encapsulation ?
 Encapsulation is the process of binding data and the methods that manipulate that data together, while keeping both safe from outside interference and misuse.
+OR
+Encapsulation is about protecting the data of a class by declaring its variables private and exposing them through public getter/setter methods. It promotes data hiding and secure code.
 
 This is done using:
 Private variables
@@ -405,10 +407,8 @@ Answer:instanceof checks whether an object is an instance of a particular class 
 33) What is Polymorphism in Java?
 Polymorphism means many forms. It allows the same method to perform different behaviors based on the object that’s calling it. Java supports:
 
-Compile-time polymorphism (Method Overloading)
+34) Compile-time polymorphism (Method Overloading)
 Runtime polymorphism (Method Overriding)
-What is Encapsulation in Java?
-Encapsulation is about protecting the data of a class by declaring its variables private and exposing them through public getter/setter methods. It promotes data hiding and secure code.
 
 What is Abstraction in Java?
 Abstraction is about hiding unnecessary implementation details from the user and showing only what’s relevant. In Java, you can achieve abstraction using abstract classes or interfaces.
