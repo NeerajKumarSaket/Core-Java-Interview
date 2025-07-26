@@ -6,7 +6,7 @@ These objects represent real-world entities like cars, books, or students.
 Think about your mobile phone. It has properties like brand, model, and color. It also has behaviors like making calls or playing music. In programming, these properties and behaviors are combined to form objects.
 Java is one of the most powerful languages that uses OOP principles to make your programs modular, reusable, and maintainable.
 
-Why Use OOP in Java? OR What Are the Advantages of Java OOP Concepts ?
+Why Use OOP in Java ? OR What Are the Advantages of Java OOP Concepts ?
 Code Reusability with Inheritance
 Modularity with Classes and Objects
 Data Security with Encapsulation
@@ -20,9 +20,9 @@ Pillers of oops
 - Inheritance
 - Polymorphism
 - Abstraction
-Let’s explore each one with simple examples.
 
-1. Class and Object in Java (Deep Dive)
+Let’s explore each one with simple examples.
+1. Class and Object in Java
 What is a Class?
 A class in Java is a user-defined blueprint or prototype from which objects are created.
 It represents a set of properties (fields) and behaviors (methods) that the object can have.
@@ -37,9 +37,9 @@ class Person {
         System.out.println("Hi, my name is " + name + " and I'm " + age + " years old.");
     }
 }
+
 2)What is an Object?
 An object is an instance of a class. When a class is defined, no memory is allocated until an object is created from it.
-
 Object Creation Example:
 public class Main {
     public static void main(String[] args) {
@@ -226,7 +226,29 @@ Real-World Analogy:
 Think of a TV remote interface. You press the button (method), but how it works inside (implementation) is hidden from you.
 
 10) Can we Inherit Constructor ?
-Answer: We cannot inherit constructor
+Answer: NO, We cannot inherit constructor
+Constructors are not members of the class, so they can’t be inherited.
+However, the child class can call the parent constructor using super().
+example-// Parent class A
+class A {
+    // Constructor of class A
+    A() {
+        System.out.println("Constructor of A");
+    }
+}
+
+// Child class B extends class A
+class B extends A {
+    // Constructor of class B
+    B() {
+        super();  // ✅ This is NOT inheritance of constructor
+                 // ✅ It's just a call to parent constructor
+                // ✅ Constructors are not inherited,
+               // ✅ but parent constructor can be invoked using super() in first line
+        System.out.println("Constructor of B");
+    }
+}
+
 
 OOP Concepts in Java with Real-Life Example
 Let’s build a mini-project:
