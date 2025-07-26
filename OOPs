@@ -53,14 +53,22 @@ public class Main {
 Real-World Example:
 Imagine a “Car” class. You could create multiple Car objects like honda, toyota, or bmw, each with its own color and speed but all based on the same class structure.
 
+new keyword:
+##############
+-> Using new keyword we send request to class to create object
+-> Once object is created new keyword will get objects's address and stores that in a reference variable
+Syntax to create object:
+-------------------------
+ClassName variableName = new ClassName();
+
 2. Encapsulation in Java (In-Depth)
 What is Encapsulation?
 Encapsulation is the process of binding data and the methods that manipulate that data together, while keeping both safe from outside interference and misuse.
 
 This is done using:
-
 Private variables
 Public getter and setter methods
+
 Code Example:
 class Student {
     private String name;
@@ -118,13 +126,38 @@ public class Main {
     }
 }
 Types of Inheritance:
-1) Single Inheritance
-2) Multilevel Inheritance
-3) Hierarchical Inheritance
-Java does not support multiple inheritance with classes to avoid ambiguity but does support it using interfaces.
-
+1) Single Inheritance – One class inherits from another. class A → class B
+2) Multilevel Inheritance – A class inherits from a class which already inherits from another. class A → class B → class C
+3) Hierarchical Inheritance – Multiple classes inherit from a single parent class. class A → class B, class A → class C
+Note: Java does not support multiple inheritance with classes to avoid ambiguity (like the Diamond Problem), but it supports multiple inheritance using interfaces.
 Real-World Example:
 A “Manager” class may inherit from an “Employee” class. Manager gets all common employee properties, like ID and salary, while adding unique behaviors like assigning tasks.
+
+✅ 4. Multiple Inheritance using Interface
+Definition: A class inherits from multiple interfaces.
+interface A {
+    void msgA(); // Interface A method
+}
+
+interface B {
+    void msgB(); // Interface B method
+}
+class C implements A, B { // C implements both A and B
+    public void msgA() {
+        System.out.println("Message from A");
+    }
+    public void msgB() {
+        System.out.println("Message from B");
+    }
+}
+📝 Class C uses methods from both interfaces A and B. Java allows this via interface only.
+
+Why is multiple inheritance not supported in Java?
+Answer:To avoid ambiguity (Diamond Problem). 
+Note: Java classes does not support mulitple inheritance because of diamond problem
+diamond problem: Suppose we inherit a method from A->B->D  and Same method is inherited from A->C->D, then confusion from which parent class method is inherited to child class D.
+This is called as DIAMOND PROBLEM. Hence in java classes does not support multiple inheritance.
+Instead, Java uses Interfaces to achieve multiple inheritance.
 
 4. What is Polymorphism?
 Polymorphism means “many forms”. In Java, it allows one action to behave differently based on the object calling it.
@@ -322,14 +355,6 @@ What is Object Cloning?
 Answer:
 Creating an exact copy of an object using the clone() method.
 The class should implement Cloneable interface.
-
-Why is multiple inheritance not supported in Java?
-Answer:
-To avoid ambiguity (Diamond Problem). 
-Note: Java classes does not support mulitple inheritance because of diamond problem
-diamond problem: Suppose we inherit a method from A->B->D  and Same method is inherited from A->C->D, then confusion from which parent class method is inherited to child class D.
-This is called as DIAMOND PROBLEM. Hence in java classes does not support multiple inheritance.
-Instead, Java uses Interfaces to achieve multiple inheritance.
 
 What is the difference between an abstract class and an interface in Java 8?
 Answer:
