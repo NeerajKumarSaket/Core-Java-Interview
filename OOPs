@@ -59,8 +59,10 @@ new keyword:
 Syntax to create object:
 -------------------------
 ClassName variableName = new ClassName();
+What is Abstraction in Java?
+Abstraction is about hiding unnecessary implementation details from the user and showing only what’s relevant. In Java, you can achieve abstraction using abstract classes or interfaces.
 
-
+================================================================Encapsulation===============================================================
 3) What is Encapsulation ?
 Encapsulation is the process of binding data and the methods that manipulate that data together, while keeping both safe from outside interference and misuse.
 OR
@@ -101,6 +103,7 @@ Improves security and control
 Real-World Analogy:
 Think of a medicine capsule—the components inside are hidden, but the whole unit is delivered together. That’s encapsulation!
 
+================================================================Inhertance=================================================================
 5) What is Inheritance?
 Inheritance is a mechanism in Java by which one class can inherit fields and methods from another class. or  Inheritance is one of the core OOP concepts in Java where one class acquires the properties (fields) and behaviors (methods) of another class. 
 It promotes code reuseability and establishes a parent-child relationship.
@@ -158,6 +161,7 @@ diamond problem: Suppose we inherit a method from A->B->D  and Same method is in
 This is called as DIAMOND PROBLEM. Hence in java classes does not support multiple inheritance.
 Instead, Java uses Interfaces to achieve multiple inheritance.
 
+===================================================================================Polymorphism=========================================================
 7) What is Polymorphism?
 Polymorphism means “many forms”. In Java, it allows one action to behave differently based on the object calling it.
 
@@ -194,9 +198,10 @@ class Cat extends Animal {
 Real-World Analogy:
 A printer object might have one method: print(). But if it’s a LaserPrinter, it prints differently than an InkJetPrinter. Same interface, different behaviors = polymorphism.
 
+========================================================Abstraction=============================================================
 8) What is Abstraction?OR  How to Achieve Abstraction in Java?
-Abstraction means showing only essential features and hiding the unnecessary details.
-Java supports abstraction using:
+Abstraction is about hiding unnecessary implementation details from the user and showing only what’s relevant.
+In Java, you can achieve abstraction using abstract classes or interfaces.
 Abstract Classes
 Interfaces
 
@@ -309,6 +314,7 @@ Only one abstract class can be extended by a subclass (does not support multiple
 | `Abstract Class` | Partially hides implementation       | Yes (some methods)         |
 | `Interface`      | Fully hides implementation (usually) | No (Java 7 no body), Yes (Java 8+) |
 
+
 13) Explain Aggregation with an example?
 Answer: Aggregation is a “Has-A” relationship with weaker association.
 
@@ -410,8 +416,6 @@ Polymorphism means many forms. It allows the same method to perform different be
 34) Compile-time polymorphism (Method Overloading)
 Runtime polymorphism (Method Overriding)
 
-What is Abstraction in Java?
-Abstraction is about hiding unnecessary implementation details from the user and showing only what’s relevant. In Java, you can achieve abstraction using abstract classes or interfaces.
 
 What is a Class in Java?
 A class in Java is a template or blueprint for creating objects. It contains variables (attributes) and methods (functions) that define the behavior of the objects.
