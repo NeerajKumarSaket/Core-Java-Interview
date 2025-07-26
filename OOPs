@@ -1,18 +1,17 @@
 OOP Concepts in Java Tutorial Ref---> https://javacody.com/oop-concepts-in-java-tutorial/
-What is Object-Oriented Programming (OOP)?
+1)What is Object-Oriented Programming (OOP)?
 Object-Oriented Programming (OOP) is a programming paradigm based on the concept of “objects”, which contain data and behavior. 
 These objects represent real-world entities like cars, books, or students.
 
 Think about your mobile phone. It has properties like brand, model, and color. It also has behaviors like making calls or playing music. In programming, these properties and behaviors are combined to form objects.
 Java is one of the most powerful languages that uses OOP principles to make your programs modular, reusable, and maintainable.
 
-Why Use OOP in Java?
-
-- Real-world modeling
-- Better code organization
-- Easier maintenance
-- Code reusability
-- Security with encapsulation
+Why Use OOP in Java? OR What Are the Advantages of Java OOP Concepts ?
+Code Reusability with Inheritance
+Modularity with Classes and Objects
+Data Security with Encapsulation
+Flexibility and Scalability with Polymorphism
+Clear Design and Maintenance with Abstraction
 
 Main OOP Concepts in Java Tutorial?
 - Class and Object
@@ -38,7 +37,7 @@ class Person {
         System.out.println("Hi, my name is " + name + " and I'm " + age + " years old.");
     }
 }
-What is an Object?
+2)What is an Object?
 An object is an instance of a class. When a class is defined, no memory is allocated until an object is created from it.
 
 Object Creation Example:
@@ -61,8 +60,8 @@ Syntax to create object:
 -------------------------
 ClassName variableName = new ClassName();
 
-2. Encapsulation in Java (In-Depth)
-What is Encapsulation?
+
+3) What is Encapsulation?
 Encapsulation is the process of binding data and the methods that manipulate that data together, while keeping both safe from outside interference and misuse.
 
 This is done using:
@@ -93,18 +92,16 @@ class Student {
     }
 }
 
-Why is Encapsulation Important?
+4)Why is Encapsulation Important?
 Protects the data from accidental corruption
 Encourages code modularity
 Improves security and control
 Real-World Analogy:
 Think of a medicine capsule—the components inside are hidden, but the whole unit is delivered together. That’s encapsulation!
 
-3. Inheritance in Java 
-What is Inheritance?
+5) What is Inheritance?
 Inheritance is a mechanism in Java by which one class can inherit fields and methods from another class. 
-It promotes code reuse and establishes a parent-child relationship.
-
+It promotes code reuseability and establishes a parent-child relationship.
 Syntax:
 class Animal {
     void breathe() {
@@ -152,14 +149,14 @@ class C implements A, B { // C implements both A and B
 }
 📝 Class C uses methods from both interfaces A and B. Java allows this via interface only.
 
-Why is multiple inheritance not supported in Java?
-Answer:To avoid ambiguity (Diamond Problem). 
+6) Why is multiple inheritance not supported in Java?
+Answer: To avoid ambiguity (Diamond Problem). 
 Note: Java classes does not support mulitple inheritance because of diamond problem
 diamond problem: Suppose we inherit a method from A->B->D  and Same method is inherited from A->C->D, then confusion from which parent class method is inherited to child class D.
 This is called as DIAMOND PROBLEM. Hence in java classes does not support multiple inheritance.
 Instead, Java uses Interfaces to achieve multiple inheritance.
 
-4. What is Polymorphism?
+7) What is Polymorphism?
 Polymorphism means “many forms”. In Java, it allows one action to behave differently based on the object calling it.
 
 There are two types:
@@ -195,9 +192,8 @@ class Cat extends Animal {
 Real-World Analogy:
 A printer object might have one method: print(). But if it’s a LaserPrinter, it prints differently than an InkJetPrinter. Same interface, different behaviors = polymorphism.
 
-5.What is Abstraction?
+8) What is Abstraction?
 Abstraction means showing only essential features and hiding the unnecessary details.
-
 Java supports abstraction using:
 Abstract Classes
 Interfaces
@@ -206,12 +202,12 @@ Abstract Class Example:
 abstract class Shape {
     abstract void draw();
 }
-
 class Rectangle extends Shape {
     void draw() {
         System.out.println("Drawing Rectangle");
     }
 }
+
 Interface Example:
 interface Animal {
     void eat();
@@ -223,23 +219,14 @@ class Cow implements Animal {
     }
 }
 
-When to Use Abstract Class vs Interface?
+9) When to Use Abstract Class vs Interface?
 Use abstract classes when some common implementation is shared.
 Use interfaces when you want to enforce a contract without implementation.
 Real-World Analogy:
 Think of a TV remote interface. You press the button (method), but how it works inside (implementation) is hidden from you.
 
-Real-World Scenario to Understand OOP
-Scenario:
-Imagine you are developing an Online Shopping System.
-
-Classes: Customer, Product, Cart, Payment
-Objects: John (Customer), iPhone (Product)
-Encapsulation: Payment details are hidden
-Inheritance: CreditCardPayment inherits from Payment
-Polymorphism: Different payment methods – one method pay() but many forms
-Abstraction: Abstract Payment process class handles general logic, specific types handle card or wallet
-By structuring your program using OOP concepts, your code becomes organized, scalable, and easy to maintain.
+10) Can we Inherit Constructor ?
+Answer: We cannot inherit constructor
 
 OOP Concepts in Java with Real-Life Example
 Let’s build a mini-project:
@@ -434,15 +421,8 @@ A class in Java is a template or blueprint for creating objects. It contains var
 What is an Object in Java?
 An object is an instance of a class. It represents a real-world entity with state (data) and behavior (methods).
 
-What Are the Advantages of Java OOP Concepts?
-Code Reusability with Inheritance
-Modularity with Classes and Objects
-Data Security with Encapsulation
-Flexibility and Scalability with Polymorphism
-Clear Design and Maintenance with Abstraction
 What is Association in Java?
 Association represents a relationship between two classes, where one class uses the functionalities of another class. It is represented as IS-A relationship
-
 Example: A Teacher teaches Students.
 
 What is Composition in Java?
@@ -457,3 +437,15 @@ What is Single Inheritance in Java?
 Single inheritance refers to a child class inheriting from only one parent class. Java supports single inheritance to maintain simplicity and avoid ambiguity in code.
 class Animal { }
 class Dog extends Animal { }
+
+Real-World Scenario to Understand OOP
+Scenario:Imagine you are developing an Online Shopping System.
+Classes: Customer, Product, Cart, Payment
+Objects: John (Customer), iPhone (Product)
+Encapsulation: Payment details are hidden
+Inheritance: CreditCardPayment inherits from Payment
+Polymorphism: Different payment methods – one method pay() but many forms
+Abstraction: Abstract Payment process class handles general logic, specific types handle card or wallet
+By structuring your program using OOP concepts, your code becomes organized, scalable, and easy to maintain.
+
+
