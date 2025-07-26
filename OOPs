@@ -167,14 +167,14 @@ Instead, Java uses Interfaces to achieve multiple inheritance.
 ===================================================================================Polymorphism=========================================================
 7) What is Polymorphism?
 Polymorphism means “many forms”. In Java, it allows one action to behave differently based on the object calling it.
+Polymorphism means many forms. It allows the same method to perform different behaviors based on the object that’s calling it.
 
 There are two types:
 1) Compile-time (Method Overloading)
 2) Runtime (Method Overriding)
 
 1) Method Overloading (Compile-Time Polymorphism)
-   Same method name, different parameters.
-
+   When multiple methods have the same name but different parameter lists in the same class.
 class MathUtils {
     int add(int a, int b) {
         return a + b;
@@ -185,17 +185,21 @@ class MathUtils {
     }
 }
 2) Method Overriding (Runtime Polymorphism)
-   Subclass provides a specific implementation of a method already defined in its parent class. Same method name and same parameter list.
-
+ When a child class provides a specific implementation of a method that is already defined in its parent class.
+ The method in the child class must have the same name, same return type, and same parameter list as in the parent class.
+// Parent class
 class Animal {
+    // Method defined in parent class
     void makeSound() {
         System.out.println("Animal makes a sound");
     }
 }
-
-class Cat extends Animal {
+// Child class that overrides the method from parent class
+class Dog extends Animal {
+    // Same method name, same return type, same parameter list
+    @Override  // Optional annotation, but recommended (ensures correct overriding)
     void makeSound() {
-        System.out.println("Cat meows");
+        System.out.println("Dog barks");
     }
 }
 Real-World Analogy:
@@ -412,13 +416,6 @@ Java avoids it by disallowing multiple inheritance of classes and using interfac
 
 32) What is the purpose of instanceof in Java?
 Answer:instanceof checks whether an object is an instance of a particular class or subclass.
-
-33) What is Polymorphism in Java?
-Polymorphism means many forms. It allows the same method to perform different behaviors based on the object that’s calling it. Java supports:
-
-34) Compile-time polymorphism (Method Overloading)
-Runtime polymorphism (Method Overriding)
-
 
 What is Association in Java?
 Association represents a relationship between two classes, where one class uses the functionalities of another class. It is represented as IS-A relationship
