@@ -279,13 +279,13 @@ public class TestVehicle {
 }
 ✔️ This small program demonstrates abstraction, inheritance, and polymorphism together.
 
-Difference between Overloading and Overriding?
+11) Difference between Overloading and Overriding?
 Feature	Overloading	Overriding
 Definition	Same method name, different params	Same method signature, subclass
 Compile-time/Runtime	Compile-time	Runtime
 Example	add(int, int) vs. add(double, double)	toString() in Object class overridden in custom class
 
-Difference between interface & abstract class? or What is an Interface and how is it different from Abstract Class?
+12) Difference between interface & abstract class? or What is an Interface and how is it different from Abstract Class?
 -------------------------------------------------
 a. interface supports mulitple inheritance but abstract class does not support multiple inheritance
 b. All variables in an interface by default are final & static whereas inside abstract class we can create static/non static/final variables
@@ -302,14 +302,16 @@ It can also have constructors, instance variables, and any type of method (stati
 A class extends an abstract class using the extends keyword.
 Only one abstract class can be extended by a subclass (does not support multiple inheritance).
 
-Can we Inherit Constructor?
-Answer: We cannot inherit constructor
+| Method           | What it hides                        | Can it have method body?   |
+| ---------------- | ------------------------------------ | -------------------------- |
+| `Abstract Class` | Partially hides implementation       | Yes (some methods)         |
+| `Interface`      | Fully hides implementation (usually) | No (Java 7 no body), Yes (Java 8+) |
 
-Explain Aggregation with an example?
+13) Explain Aggregation with an example?
 Answer: Aggregation is a “Has-A” relationship with weaker association.
 
 Example: Department has multiple Employees.
-Copy
+
 class Employee {
     String name;
 }
@@ -317,112 +319,92 @@ class Employee {
 class Department {
     List<Employee> employees;
 }
-Can you explain the SOLID principles in relation to OOP in Java?
-Answer:
 
+14) Can you explain the SOLID principles in relation to OOP in Java?
+Answer:
 S – Single Responsibility Principle
 O – Open/Closed Principle
 L – Liskov Substitution Principle
 I – Interface Segregation Principle
 D – Dependency Inversion Principle
 
-What is the role of the super keyword in Java?
+15) What is the role of the super keyword in Java?
 Answer:Refers to the parent class constructor/method/field.
 Example: super() calls the superclass constructor.
 
-What is the role of this keyword in Java?
-Answer:
-Refers to the current instance of the class. Useful to resolve ambiguity between instance variables and parameters.
+16) What is the role of this keyword in Java?
+Answer:Refers to the current instance of the class. Useful to resolve ambiguity between instance variables and parameters.
 
-What is method hiding in Java?
+17) What is method hiding in Java?
 Answer:If a subclass defines a static method with the same signature as in parent class, it is called method hiding.
-
 Only applicable to static methods.
-Explain Constructor Overloading.
-Answer:
-Having multiple constructors in a class with different parameter lists. Helps in creating objects in different ways.
 
+18) Explain Constructor Overloading ? 
+Answer:Having multiple constructors in a class with different parameter lists. Helps in creating objects in different ways.
 class Person {
     Person() {}
     Person(String name) {}
 }
 
-Can we override a static method in Java ?
+19) Can we override a static method in Java ?
 Answer:No. Static methods are class-level and not subject to runtime polymorphism. We can hide them but not override them.
 
-What is Covariant Return Type?
-Answer:
-When overriding a method, the return type of the overriding method can be a subclass of the return type declared in the parent class.
+20) What is Covariant Return Type?
+Answer:When overriding a method, the return type of the overriding method can be a subclass of the return type declared in the parent class.
 
-Constructor Chaining?
+21)Constructor Chaining?
 ---------------------
 -> When we call one constructor from another constructor it will form chain like flow structure. This is called as constructor chaining
 -> This can be achieved by using this() keyword or Creating Object in another constructor
 
 
-What is Object Cloning?
-Answer:
-Creating an exact copy of an object using the clone() method.
+22) What is Object Cloning?
+Answer: Creating an exact copy of an object using the clone() method.
 The class should implement Cloneable interface.
 
-What is the difference between an abstract class and an interface in Java 8?
-Answer:
-
-Abstract class can have both abstract and concrete methods; interfaces can have default and static methods (from Java 8).
+23) What is the difference between an abstract class and an interface in Java 8?
+Answer:Abstract class can have both abstract and concrete methods; interfaces can have default and static methods (from Java 8).
 Interfaces support multiple inheritance; abstract classes don’t.
 
-Can we instantiate an abstract class?
+24) Can we instantiate an abstract class?
 Answer: No. Abstract classes cannot be instantiated directly. They must be subclassed, and their abstract methods implemented.
 
-What is constructor chaining in Java?
-Answer:
-Constructor chaining refers to calling one constructor from another within the same class using this() or from parent class using super().
+25) What is constructor chaining in Java?
+Answer:Constructor chaining refers to calling one constructor from another within the same class using this() or from parent class using super().
 
-What is the default access modifier for a class in Java?
+26) What is the default access modifier for a class in Java?
 Answer:If no access modifier is specified, the class has default (package-private) access
 
-What is final keyword in OOP concepts?
-Answer:
-final can be used with:
+27) What is final keyword in OOP concepts?
+Answer:final can be used with:
 Variables – Makes value constant.
 Methods – Prevents overriding.
 Classes – Prevents inheritance.
 
-What is a nested class in Java?
-Answer:
-A class defined inside another class. Types:
+28) What is a nested class in Java?
+Answer:A class defined inside another class. Types:
 Static nested class
 Inner class
 Local class
 Anonymous class
 
-Can a constructor be overridden in Java?
+29) Can a constructor be overridden in Java?
 Answer: No. Constructors cannot be overridden because they are not inherited.
 
-What is multiple inheritance and how does Java solve it?
-Answer:
-Multiple inheritance refers to a class having more than one parent.
+30) What is multiple inheritance and how does Java solve it?
+Answer:Multiple inheritance refers to a class having more than one parent.
 Java solves potential conflicts using interfaces with default methods and explicitly overriding them.
 
-What is diamond problem in OOP and how does Java handle it?
-Answer:
-The diamond problem occurs in multiple inheritance when two superclasses define the same method.
+31) What is diamond problem in OOP and how does Java handle it?
+Answer:The diamond problem occurs in multiple inheritance when two superclasses define the same method.
 Java avoids it by disallowing multiple inheritance of classes and using interfaces with explicit overrides.
 
-What is the difference between shallow copy and deep copy?
-Feature	Shallow Copy	Deep Copy
-Definition	Copies reference	Copies object and nested objects
-Default in Java	clone() (by default)	Custom implementation required
+32) What is the purpose of instanceof in Java?
+Answer:instanceof checks whether an object is an instance of a particular class or subclass.
 
-What is the purpose of instanceof in Java?
-Answer:
-instanceof checks whether an object is an instance of a particular class or subclass.
-
-Frequently Asked Questions (FAQs) on OOP Concepts in Java Tutorial
 What is Inheritance in Java?
 Inheritance is one of the core OOP concepts in Java where one class acquires the properties (fields) and behaviors (methods) of another class. 
 It helps with code reusability and maintains hierarchical relationships.
-
 Example:
 class Animal { }
 class Dog extends Animal { }
@@ -454,20 +436,16 @@ Example: A House has Rooms. Without the House, Rooms don’t exist.
 What is Aggregation in Java?
 Aggregation is a weaker form of association, where one class can exist independently of the other.
 Example: A Department has Teachers. Teachers can exist even if the Department is removed.
-
+ 
 What is Single Inheritance in Java?
 Single inheritance refers to a child class inheriting from only one parent class. Java supports single inheritance to maintain simplicity and avoid ambiguity in code.
 class Animal { }
 class Dog extends Animal { }
 
-Real-World Scenario to Understand OOP
-Scenario:Imagine you are developing an Online Shopping System.
-Classes: Customer, Product, Cart, Payment
-Objects: John (Customer), iPhone (Product)
-Encapsulation: Payment details are hidden
-Inheritance: CreditCardPayment inherits from Payment
-Polymorphism: Different payment methods – one method pay() but many forms
-Abstraction: Abstract Payment process class handles general logic, specific types handle card or wallet
-By structuring your program using OOP concepts, your code becomes organized, scalable, and easy to maintain.
+What is the difference between shallow copy and deep copy?
+Feature	 Shallow Copy	Deep Copy
+Definition	Copies reference	Copies object and nested objects
+Default in Java	clone() (by default)	Custom implementation required
+
 
 
