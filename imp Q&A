@@ -85,3 +85,7 @@ topic-
 jpa repo vs crudjpa repo in 
 
 
+Ques Spring Dependency Injection ?
+Ans.-Dependency Injection is the main functionality provided by Spring IOC(Inversion of Control). The Spring-Core module is responsible for injecting dependencies through either Constructor or Setter methods. The design principle of Inversion of Control emphasizes keeping the Java classes independent of each other and the container frees them from object creation and maintenance.
+
+
