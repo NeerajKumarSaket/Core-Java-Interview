@@ -1,0 +1,434 @@
+"What does static mean in Java? Can you explain its real use?"
+  static means the member belongs to the class rather than instances of the class.
+  Static variables are shared among all objects. Static methods can be called without creating an object.
+  A common use is utility methods or constants.
+
+2) "What is the role of final in Java? Can you give examples for final class, method, and variable?"
+ Answer:
+final is used to prevent changes. A final variable can't be reassigned, a final method can't be overridden, and a final class can't be extended. It's used for constants and immutability.
+Example:
+final int MAX = 100;
+final class A {} // cannot be subclassed
+
+3. "What does this refer to in Java? When do you typically use it?"
+  this refers to the current object. It’s used to resolve naming conflicts between instance variables and parameters, or to invoke other constructors.
+
+4 What is the use of super ?"
+  super is used to refer to the immediate parent class. It is commonly used to access parent class methods or constructors when overridden.
+class Parent {
+    void show() { System.out.println("Parent"); }
+}
+class Child extends Parent {
+    void show() {
+        super.show(); // calls Parent's show()
+        System.out.println("Child");
+    }
+}
+
+5)"What is an abstract class? Can we instantiate it?"
+  An abstract class cannot be instantiated. It may have abstract methods (no body) and concrete methods. It provides partial abstraction and is intended to be extended.
+  abstract class Shape {
+    abstract void draw();
+}
+
+6 "How is interface different from abstract class?"
+✅ Best Answer:
+Interface defines 100% abstraction (until Java 7). Java 8+ allows default and static methods. Unlike abstract classes, interfaces support multiple inheritance.
+  interface Drawable {
+    void draw();
+}
+7 "What is the role of synchronized in multithreading?"
+✅ Best Answer:
+It ensures that only one thread can access a method or block at a time. This prevents data inconsistency in a multithreaded environment.
+synchronized void increment() {
+    count++;
+}
+8 "What does transient do during serialization?"
+  When a variable is marked transient, its value is not serialized. This is used to skip sensitive or unnecessary data.
+transient String password;
+9 "How does volatile affect variable behavior in threads?"
+✅ Best Answer:
+volatile ensures that the variable is always read from main memory, not cached by threads. It ensures visibility of changes across threads.
+
+10 What does instanceof do in Java?"
+✅ Best Answer:
+It checks whether an object is an instance of a specific class or subclass. It's useful in type checking before casting.
+
+if (obj instanceof String) { ... }
+
+11 "What is the use of throw in Java?"
+✅ Best Answer:
+throw is used to explicitly throw an exception. It's often used with custom or conditional exceptions.
+if (age < 18) {
+    throw new IllegalArgumentException("Age must be 18 for vote");
+}
+
+12 What’s the difference between throw and throws?"
+✅ Best Answer:
+throw is used to throw an exception, while throws is used to declare that a method might throw one.
+void readFile() throws IOException {
+    ...
+}
+13 Why is the return type of main method void?"
+✅ Best Answer:
+void means the method does not return a value. The main method serves as an entry point and doesn’t return anything to the JVM.
+
+14 When would you use an abstract class instead of an interface?"
+✅ Best Answer:
+Use an abstract class when you want to provide some shared behavior or fields. Use an interface when you want to define a contract without implementation — especially for multiple inheritance.
+
+15 "What is enum in Java?"
+✅ Best Answer:
+enum defines a fixed set of constants. It's a type-safe way to represent options (like days, roles, etc.)
+enum Day { MON, TUE, WED }
+
+16 Why do we use package in Java?"
+✅ Best Answer:
+Packages group related classes and avoid name conflicts. They also help with access control and structure.
+
+17 How does import work in Java?"
+✅ Best Answer:
+The import statement lets us use classes from other packages without writing the full name.
+
+18 
+  
+  
+1. Data Types
+boolean: Declares a variable that can hold true or false values.
+Example: boolean isActive = true;
+byte: A 8-bit signed integer (-128 to 127).
+Example: byte b = 100;
+char: A 16-bit Unicode character.
+Example: char c = 'A';
+double: A 64-bit floating-point number.
+Example: double d = 3.14;
+float: A 32-bit floating-point number.
+Example: float f = 2.5f;
+int: A 32-bit signed integer.
+
+Example: int i = 42;
+
+
+long: A 64-bit signed integer.
+
+Example: long l = 123456789L;
+
+
+short: A 16-bit signed integer (-32,768 to 32,767).
+
+Example: short s = 1000;
+
+
+
+2. Control Flow
+
+break: Exits a loop or switch statement.
+
+Example: break; in a loop stops iteration.
+
+
+case: Defines a branch in a switch statement.
+
+Example: case 1: System.out.println("One");
+
+
+continue: Skips the current iteration of a loop and proceeds to the next.
+
+Example: continue; skips to the next loop iteration.
+
+
+default: Specifies the default block in a switch statement.
+
+Example: default: System.out.println("Other");
+
+
+do: Starts a do-while loop, which executes at least once.
+
+Example: do { ... } while (condition);
+
+
+else: Specifies an alternative block in an if statement.
+
+Example: if (x > 0) { ... } else { ... }
+
+
+for: Defines a loop with initialization, condition, and update.
+
+Example: for (int i = 0; i < 5; i++) { ... }
+
+
+if: Tests a condition and executes code if true.
+
+Example: if (x > 0) { ... }
+
+
+return: Exits a method and optionally returns a value.
+
+Example: return x;
+
+
+switch: Selects a block of code to execute based on a variable’s value.
+
+Example: switch (x) { case 1: ... }
+
+
+while: Executes a block of code as long as a condition is true.
+
+Example: while (x < 10) { ... }
+
+
+
+3. Modifiers
+
+abstract: Declares a class or method as abstract (incomplete, to be implemented by subclasses).
+
+Example: abstract class Shape { abstract void draw(); }
+
+
+final: Prevents modification (classes cannot be extended, methods cannot be overridden, variables are constant).
+
+Example: final int MAX = 100;
+
+
+private: Restricts access to within the same class.
+
+Example: private int x;
+
+
+protected: Allows access within the same package and subclasses.
+
+Example: protected void method();
+
+
+public: Allows unrestricted access.
+
+Example: public class MyClass { ... }
+
+
+static: Belongs to the class, not instances; shared across all objects.
+
+Example: static int count = 0;
+
+
+strictfp: Ensures floating-point precision is platform-independent.
+
+Example: strictfp class Calculator { ... }
+
+
+synchronized: Prevents concurrent access to a method or block by multiple threads.
+
+Example: synchronized void sharedMethod() { ... }
+
+
+transient: Prevents a variable from being serialized.
+
+Example: transient int temp;
+
+
+volatile: Indicates a variable may change asynchronously by threads.
+
+Example: volatile boolean running = true;
+
+
+
+4. Class, Interface, and Object-Related
+
+class: Defines a class.
+
+Example: class MyClass { ... }
+
+
+extends: Indicates a class inherits from another class.
+
+Example: class Dog extends Animal { ... }
+
+
+implements: Indicates a class implements an interface.
+
+Example: class MyClass implements MyInterface { ... }
+
+
+interface: Defines a contract with abstract methods.
+
+Example: interface MyInterface { void method(); }
+
+
+new: Creates a new object or array.
+
+Example: MyClass obj = new MyClass();
+
+
+super: Refers to the superclass’s constructor, methods, or fields.
+
+Example: super.method();
+
+
+this: Refers to the current object.
+
+Example: this.x = x;
+
+
+
+5. Exception Handling
+
+catch: Handles exceptions thrown in a try block.
+
+Example: catch (Exception e) { ... }
+
+
+finally: Executes code after a try/catch block, regardless of outcome.
+
+Example: finally { cleanup(); }
+
+
+throw: Throws an exception explicitly.
+
+Example: throw new IOException("Error");
+
+
+throws: Declares exceptions a method might throw.
+
+Example: void method() throws IOException { ... }
+
+
+try: Defines a block to monitor for exceptions.
+
+Example: try { riskyOperation(); }
+
+
+
+6. Package and Import
+
+import: Imports classes, interfaces, or packages for use.
+
+Example: import java.util.List;
+
+
+package: Declares the package a class belongs to.
+
+Example: package com.example;
+
+
+
+7. Miscellaneous
+
+assert: Tests an assumption; throws an error if false (used for debugging).
+
+Example: assert x > 0 : "x must be positive";
+
+
+enum: Defines a set of named constants.
+
+Example: enum Day { MONDAY, TUESDAY }
+
+
+instanceof: Tests if an object is an instance of a class or interface.
+
+Example: if (obj instanceof String) { ... }
+
+
+void: Specifies a method returns no value.
+
+Example: void method() { ... }
+
+
+
+8. Reserved but Not Used
+
+const: Reserved but not used in Java (to avoid confusion with C++).
+goto: Reserved but not used in Java (to avoid unstructured control flow).
+
+9. Module-Related (Java 9+)
+
+exports: Specifies a package to be accessible to other modules.
+
+Example: exports com.example;
+
+
+module: Defines a module in the Java Module System.
+
+Example: module myModule { ... }
+
+
+open: Allows reflective access to a module’s contents.
+
+Example: open module myModule { ... }
+
+
+opens: Opens a specific package for reflective access.
+
+Example: opens com.example;
+
+
+provides: Specifies a service implementation.
+
+Example: provides Service with Impl;
+
+
+requires: Declares a dependency on another module.
+
+Example: requires java.base;
+
+
+to: Used in module declarations to limit access.
+
+Example: exports com.example to otherModule;
+
+
+transitive: Indicates a module dependency is passed to dependents.
+
+Example: requires transitive java.sql;
+
+
+uses: Declares a service used by the module.
+
+Example: uses Service;
+
+
+with: Specifies a service provider in a provides directive.
+
+Example: provides Service with Impl;
+
+
+
+10. Record-Related (Java 14+)
+
+record: Defines a concise data class with immutable fields.
+
+Example: record Point(int x, int y) {}
+
+
+
+11. Pattern Matching and Switch Enhancements (Java 17+)
+
+sealed: Restricts which classes can extend or implement a class/interface.
+
+Example: sealed class Shape permits Circle, Square { ... }
+
+
+non-sealed: Allows a sealed class’s subclass to be extended freely.
+
+Example: non-sealed class Circle extends Shape { ... }
+
+
+permits: Specifies allowed subclasses for a sealed class.
+
+Example: sealed class Shape permits Circle, Square { ... }
+
+
+
+12. Literals and Other
+
+true: Boolean literal for true.
+
+Example: boolean b = true;
+
+
+false: Boolean literal for false.
+
+Example: boolean b = false;
+
+
+null: Represents a null reference (no object).
+
+Example: Object obj = null;
