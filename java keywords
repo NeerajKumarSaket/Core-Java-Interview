@@ -1,4 +1,7 @@
-"What does static mean in Java? Can you explain its real use?"
+
+Total 53 keywords reserved in java 
+
+1 "What does static mean in Java? Can you explain its real use?"
   static means the member belongs to the class rather than instances of the class.
   Static variables are shared among all objects. Static methods can be called without creating an object.
   A common use is utility methods or constants.
@@ -92,7 +95,11 @@ The import statement lets us use classes from other packages without writing the
 
 18 transitive: Indicates a module dependency is passed to dependents.
 Example: requires transitive java.sql;
-  
+
+1. Access Modifiers
+public	Visible to all classes from all packages.
+private	Visible only within the class
+protected	Visible within package/subclass
   
 1. Data Types
 boolean: Declares a variable that can hold true or false values.
