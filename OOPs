@@ -26,11 +26,6 @@ Let’s explore each one with simple examples.
 
 What is a Class in Java?
 A class in Java is a user-defined blueprint or prototype for creating objects. It contains variables (attributes) and methods (functions) that define the behavior of the objects.
-
-What is an Object in Java?
-An object is an instance of a class. It represents a real-world entity with state (data) and behavior (methods).
-
-Think of a class as a blueprint of a house—you can create multiple houses (objects) from the same blueprint, each having its own identity but based on the same structure.
 Syntax:
 class Person {
     String name;
@@ -49,7 +44,7 @@ public class Main {
         Person p1 = new Person();  // Object created
         p1.name = "John";
         p1.age = 25;
-        p1.introduce();
+        p1.introduce();//method calling
     }
 }
 Real-World Example:
@@ -167,8 +162,8 @@ Instead, Java uses Interfaces to achieve multiple inheritance.
 
 ===================================================================================Polymorphism=========================================================
 7) What is Polymorphism?
+It allows methods to behave differently based on the object calling them, even if the method is invoked through a common reference type.
 Polymorphism means “many forms”. In Java, it allows one action to behave differently based on the object calling it.
-Polymorphism means many forms. It allows the same method to perform different behaviors based on the object that’s calling it.
 
 There are two types:
 1) Compile-time (Method Overloading)
