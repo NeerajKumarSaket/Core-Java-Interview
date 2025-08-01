@@ -1,0 +1,103 @@
+71. What is thread?
+Threads allows a program to operate more efficiently by doing multiple things at the same time. Threads can be used to perform complicated tasks in the background without interrupting the main program.
+
+72. What is Demon thread?
+A Daemon thread is a background service thread which runs as a low priority thread and performs background operations like garbage collection.
+
+73. What is multithreads?
+Multithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such program is called a
+thread. Each thread runs independently but shares the same memory space.
+So, threads are light -weight processes within a process.
+Ways to create threads:
+Extending Thread class
+Implementing Runnable interface ✅ (Preferred for flexibility and multiple inheritance)
+
+74.Difference between thread join and sleep method? 
+There is a difference between join() and sleep(). 
+join() will wait until the timeout expires or the thread finishes.
+sleep() will just wait for the specified amount of time unless interrupted.
+
+75. Process to create thread and which is best and why?
+In Java, threads can be created by either extending the Thread class or implementing the Runnable interface.
+Implementing Runnable is generally preferred because it promotes better object-oriented design by separating the task from thread execution, supports multiple inheritance, and allows the same task to be reused by multiple threads.
+
+76. What is thread scheduler?
+Thread scheduler in Java is the component of JVM that determines the execution order of multiple threads on a single processor (CPU).
+It decides the order in which threads should run. This process is called thread scheduling in Java.
+
+77. Explain about priority of thread?
+Each thread has a priority. Priorities are represented by a number between 1 and 10. In most cases, the thread scheduler schedules the threads according to their priority (known as pre-emptive scheduling).
+Note that not only JVM a Java programmer can also assign the priorities of a thread explicitly in a Java program by using set Priority () method..
+
+78. Explain wait, notify and notify all?
+In Java, wait(), notify(), and notifyAll() are used when threads need to communicate and coordinate with each other.
+wait() → makes a thread pause and release the lock until another thread tells it to continue.
+notify() → wakes up one waiting thread.
+notifyAll() → wakes up all waiting threads.
+They must be used inside a synchronized block, because they work with the lock (monitor) of an object.
+
+
+79. What is thread pool?
+
+80. What are executor services?
+The Java ExecutorService is the interface which allows us to execute tasks on threads asynchronously. 
+The Java ExecutorService interface is present in the java.util.concurrent package. 
+The ExecutorService helps in maintaining a pool of threads and assigns them tasks. It also provides the facility to queue up tasks until there is a free thread available .
+
+81. Difference between runnable and callable interface?
+✅ Runnable vs Callable (Simple Explanation)
+Runnable is used when the task does not return any result and cannot throw checked exceptions.
+
+Callable is a more advanced interface used when you need the task to return a result and handle checked exceptions.
+
+Callable is often used with ExecutorService and Future to run tasks in parallel and get the result later.
+
+| Feature                        | Runnable                                       | Callable                                        |
+|-------------------------------|-----------------------------------------------|------------------------------------------------|
+| Package                       | java.lang (since Java 1.0)                    | java.util.concurrent (since Java 1.5)          |
+| Method to override            | run()                                         | call()                                         |
+| Return value                  | Cannot return a result                        | Can return a result                            |
+| Exception handling            | Cannot throw checked exceptions               | Can throw checked exceptions                   |
+| Result access                 | No result returned                            | Result accessed via Future.get()               |
+| Used with                     | Thread, ExecutorService.submit(Runnable)      | ExecutorService.submit(Callable)               |
+| Purpose                       | Simple background task                        | Task with result and error handling            |
+
+82. Advantage and Disadvantage of thread?
+| # | Advantage                                                                                                       |
+| - | --------------------------------------------------------------------------------------------------------------- |
+| 1 | **Improves application performance** by doing multiple tasks at the same time (concurrent execution).           |
+| 2 | **Frees up the main thread** so the UI or other logic can remain responsive (especially in GUI or server apps). |
+| 3 | **Efficient resource utilization** – CPU cycles are better used when multiple threads work together.            |
+| 4 | Threads can help in **breaking down large tasks** into smaller parallel units, improving scalability.           |
+
+| # | Disadvantage                                                                                                     |
+| - | ---------------------------------------------------------------------------------------------------------------- |
+| 1 | **Harder to debug and maintain** – multithreaded code can be complex and unpredictable (e.g., race conditions).  |
+| 2 | **Thread creation overhead** – more threads consume more **CPU and memory**, especially if not managed properly. |
+| 3 | **Exception handling is tricky** – unhandled exceptions in threads can crash the program.                        |
+| 4 | Risk of **deadlocks, livelocks, and thread starvation** if synchronization is not handled carefully.             |
+
+83. Explain thread life cycle?
+| State            | Description                                                                 |
+|------------------|-----------------------------------------------------------------------------|
+| 1. New           | The thread is created but not started yet. Code inside the thread has not run. |
+| 2. Runnable      | The thread is ready to run but waiting for CPU time from the thread scheduler. |
+| 3. Running       | The thread is currently executing (got CPU time).                           |
+| 4. Blocked/Waiting| The thread is temporarily inactive (waiting for a resource or signal).      |
+| 5. Terminated    | The thread has finished execution or terminated due to an exception.         |
+
+New: Whenever a new thread is created, it is always in the new state. For a thread in the new state, the code has not been run yet and thus has not begun its execution.
+Active: When a thread invokes the start() method, it moves from the new state to the active state. The active state contains two states within it: one is runnable, and the other is running.
+o Runnable: A thread, that is ready to run is then moved to the runnable state. In the runnable state, It is the duty of the thread scheduler to provide the thread time to run, i.e., moving the thread the running state.
+o Running: When the thread gets the CPU, it moves from the runnable to the running state. Generally, the most common change in the state of a thread is from runnable to running andagain back to runnable.
+o Blocked or Waiting: Whenever a thread is inactive for a span of time (not permanently) then, either the thread is in the blocked state or is in the waiting state.
+o Terminated: A thread reaches the termination state because of the following reasons:
+o When a thread has finished its job, then it exists or terminates normally.
+o Abnormal termination: It occurs when some unusual events such as an unhandled exception or segmentation fault.
+
+84. What is Synchronization?
+Synchronization in Java is used to prevent multiple threads from accessing shared resources at the same time, 
+ensuring data consistency and thread safety during concurrent execution.
+
+
+
