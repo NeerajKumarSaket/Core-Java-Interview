@@ -1,3 +1,5 @@
+other refrence = https://harshwillblog.hashnode.dev/learning-java-collection-framework?source=more_articles_bottom_blogs
+
 
 93.What is singleton class and how we can make a class singleton?
 A Singleton class in Java is a class that allows only one object (instance) to be created throughout the program.
@@ -54,9 +56,120 @@ It includes data structures like List, Set, Queue, and Map and provides powerful
                      |          |         |
            ArrayList, LinkedList  HashSet, TreeSet  PriorityQueue, ArrayDeque
 
-                    java.util.Map (Not part of Collection but part of collection framework)
-                             |
-                    HashMap, TreeMap, LinkedHashMap
+
+                    (map)
+java.util.Map (Not part of Collection but part of collection framework)
+                     |
+        HashMap, TreeMap, LinkedHashMap
+import java.util.*;
+
+public class CollectionFrameworkFullDemo {
+
+    public static void main(String[] args) {
+
+        // 🔹 1. LIST INTERFACE IMPLEMENTATIONS 🔹
+        // Lists store elements in insertion order and allow duplicates
+
+        // ✅ ArrayList: Resizable array
+        List<String> arrayList = new ArrayList<>();
+        arrayList.add("Apple");
+        arrayList.add("Banana");
+        arrayList.add("Apple"); // duplicates allowed
+        System.out.println("ArrayList (allows duplicates, ordered): " + arrayList);
+
+        // ✅ LinkedList: Doubly linked list structure
+        List<String> linkedList = new LinkedList<>();
+        linkedList.add("Dog");
+        linkedList.add("Cat");
+        linkedList.add("Dog"); // duplicates allowed
+        System.out.println("LinkedList (allows duplicates, ordered): " + linkedList);
+
+        System.out.println("--------------------------------------------------------");
+
+        // 🔹 2. SET INTERFACE IMPLEMENTATIONS 🔹
+        // Sets store unique elements only, duplicates are not allowed
+
+        // ✅ HashSet: Unordered, unique values only
+        Set<String> hashSet = new HashSet<>();
+        hashSet.add("Java");
+        hashSet.add("Python");
+        hashSet.add("Java"); // duplicate will be ignored
+        System.out.println("HashSet (no duplicates, unordered): " + hashSet);
+
+        // ✅ LinkedHashSet: Maintains insertion order
+        Set<String> linkedHashSet = new LinkedHashSet<>();
+        linkedHashSet.add("Mango");
+        linkedHashSet.add("Orange");
+        linkedHashSet.add("Mango"); // duplicate will be ignored
+        System.out.println("LinkedHashSet (insertion order, no duplicates): " + linkedHashSet);
+
+        // ✅ TreeSet: Automatically sorted in natural order
+        Set<Integer> treeSet = new TreeSet<>();
+        treeSet.add(30);
+        treeSet.add(10);
+        treeSet.add(20);
+        treeSet.add(10); // duplicate ignored
+        System.out.println("TreeSet (sorted, no duplicates): " + treeSet);
+
+        System.out.println("--------------------------------------------------------");
+
+        // 🔹 3. QUEUE INTERFACE IMPLEMENTATIONS 🔹
+        // Queues follow FIFO (First-In-First-Out) principle
+
+        // ✅ PriorityQueue: Elements are ordered based on natural priority (or custom comparator)
+        Queue<Integer> priorityQueue = new PriorityQueue<>();
+        priorityQueue.add(40);
+        priorityQueue.add(10);
+        priorityQueue.add(20);
+        System.out.print("PriorityQueue (natural order): ");
+        while (!priorityQueue.isEmpty()) {
+            System.out.print(priorityQueue.poll() + " ");
+        }
+        System.out.println();
+
+        // ✅ ArrayDeque: Double-ended queue, faster than LinkedList
+        Deque<String> deque = new ArrayDeque<>();
+        deque.add("One");
+        deque.addFirst("Zero");  // add at beginning
+        deque.addLast("Two");    // add at end
+        System.out.println("ArrayDeque (FIFO & LIFO supported): " + deque);
+
+        System.out.println("--------------------------------------------------------");
+
+        // 🔹 4. MAP INTERFACE IMPLEMENTATIONS 🔹
+        // Maps store key-value pairs, keys are unique, values can repeat
+
+        // ✅ HashMap: Unordered key-value store
+        Map<String, Integer> hashMap = new HashMap<>();
+        hashMap.put("A", 100);
+        hashMap.put("B", 200);
+        hashMap.put("A", 300); // replaces value for key "A"
+        System.out.println("HashMap (unordered): " + hashMap);
+
+        // ✅ LinkedHashMap: Maintains insertion order
+        Map<String, Integer> linkedHashMap = new LinkedHashMap<>();
+        linkedHashMap.put("X", 10);
+        linkedHashMap.put("Y", 20);
+        linkedHashMap.put("X", 30); // replaces value for key "X"
+        System.out.println("LinkedHashMap (insertion order): " + linkedHashMap);
+
+        // ✅ TreeMap: Sorted by keys
+        Map<String, Integer> treeMap = new TreeMap<>();
+        treeMap.put("Banana", 50);
+        treeMap.put("Apple", 40);
+        treeMap.put("Cherry", 60);
+        System.out.println("TreeMap (sorted by keys): " + treeMap);
+
+        System.out.println("--------------------------------------------------------");
+
+        // 🔹 Bonus: Iterate over Map using for-each
+        System.out.println("Iterating over TreeMap:");
+        for (Map.Entry<String, Integer> entry : treeMap.entrySet()) {
+            System.out.println(entry.getKey() + " => " + entry.getValue());
+        }
+    }
+}
+
 
 
 95. What are wrapper classes?
