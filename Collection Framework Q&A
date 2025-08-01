@@ -1,5 +1,25 @@
 other refrence = https://harshwillblog.hashnode.dev/learning-java-collection-framework?source=more_articles_bottom_blogs
 
+| Collection               | When to Use                            | Why It's Suitable                                         |
+|--------------------------|----------------------------------------|-----------------------------------------------------------|
+| ArrayList                | Need order + fast access               | Maintains insertion order and allows random access        |
+| LinkedList               | Frequent insert/delete                 | Faster insert/delete at both ends or middle               |
+| HashSet                  | Uniqueness required                    | Removes duplicates, offers fast lookup                    |
+| TreeSet                  | Sorted + unique elements               | Automatically keeps elements sorted and unique            |
+| HashMap                  | Key-value lookup                       | Fast access by key, no guaranteed order                   |
+| LinkedHashMap            | Maintain key insertion order           | Remembers insertion order of keys                         |
+| TreeMap                  | Sorted map by key                      | Keys are stored in natural or custom sorted order         |
+| ArrayDeque / LinkedList  | FIFO queue behavior                    | Supports add/remove at both ends, queue operations        |
+| PriorityQueue            | Priority-based processing              | Retrieves elements based on priority                      |
+
+
+|-------------------------- Thread-Safe Collections Start Below ---------------------------|
+
+| CopyOnWriteArrayList     | Thread-safe list                       | Safe for concurrent reads/writes, slow on frequent updates     |
+| Collections.synchronizedSet() | Thread-safe set                  | Wraps any Set (e.g., HashSet) to make it thread-safe           |
+| ConcurrentHashMap        | Thread-safe map (modern)               | High-performance, non-blocking access for multi-threaded env   |
+| Collections.synchronizedMap() | Thread-safe map (legacy)         | Locks entire map; slower and less scalable than ConcurrentHashMap |
+
 
 93.What is singleton class and how we can make a class singleton?
 A Singleton class in Java is a class that allows only one object (instance) to be created throughout the program.
@@ -49,19 +69,24 @@ It includes data structures like List, Set, Queue, and Map and provides powerful
 
 ✅ Structure of Java Collection Framework
 
-                   java.util.Collection (Interface)
-                          /     |      \
-                         /      |       \
-                    List       Set      Queue
-                     |          |         |
-           ArrayList, LinkedList  HashSet, TreeSet  PriorityQueue, ArrayDeque
+                 Collection (Interface)                                                
+                      |
+      ------------------------------------------            
+      |                    |                   |
+     List                Set                Queue
+      |                   |                   |
+ArrayList,           HashSet,          PriorityQueue,
+LinkedList,          LinkedHashSet,    ArrayDeque
+Vector               TreeSet
 
+           Map (Interface)
+                 |
+    ------------------------------------
+    |                |                |
+  HashMap     LinkedHashMap       TreeMap
+    |
+Hashtable (legacy)
 
-                    (map)
-java.util.Map (Not part of Collection but part of collection framework)
-                     |
-        HashMap, TreeMap, LinkedHashMap
-import java.util.*;
 
 public class CollectionFrameworkFullDemo {
 
@@ -180,10 +205,12 @@ public class CollectionFrameworkFullDemo {
 
 
 99. Difference between Collection and Collections?
+
 Collection:
-Collection is a interface present in java. util.package. It is used to represent a group ofindividual objects as a single unit.
+Collection is a interface present in java.util.package. It is used to represent a group ofindividual objects as a single unit.
 The List, Set, and Queue are the main sub-interfaces of the collection interface.
 The add(), remove(), clear(), size(), and contains() are the important methods of theCollection interface.
+
 Collections:
 Collections is a utility class present in java.util.package. It defines several utility staticmethods like sorting and searching which is used to operate on collection.
 
@@ -192,8 +219,7 @@ Collection
 Map List Set
 Queue
 Priority Queue
-Hashmap Arraylist Linkedlist Treeset Hashset Linked
-Hashset
+Hashmap Arraylist Linkedlist Treeset Hashset LinkedHashset
 1) List: - list is an interface.
 List follows insertion order. It consist of duplicate elements. To use list interface we can use three classes.
 i. Arraylist
@@ -214,18 +240,15 @@ ArrayList stores in continuous memory location where LinkedList doesn’t requir
 continuous memory location. ArrayList is non-synchronized where vector is Synchronized
 
 103. Explain HashSet and HashMap?.
-HashMap
-HashSet
-Data stores as key-value pair.
-Data stores as object.
-synchronized
-Non-synchronized
-Doesn’t allow duplicate element
-It contains single null key and multiplenull values.
-It is slower than hashSet
-Faster than HashMap.
-Implement of set interface
-Implement of map interface.
+HashMap                                        |--| HashSet
+-----------------------------------------------|--|-----------------------------------------------
+Stores data as key-value pairs                 |--| Stores data as unique objects (no key-value)
+Implements Map interface                       |--| Implements Set interface
+Allows one null key and multiple null values   |--| Allows one null element only
+Not synchronized by default                    |--| Not synchronized by default
+Generally slower due to key-value structure    |--| Generally faster for simple membership tests
+Used when mapping keys to values is needed     |--| Used when only uniqueness of elements is required
+
 
 104. Internal working of HashMap?
 It internally uses hashtable. It uses hashcode of the key object and this hashcode used to findindex of the bucket.
