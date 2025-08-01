@@ -61,10 +61,17 @@ Hashtable (legacy)
 
 |-------------------------- Thread-Safe Collections Start Below ---------------------------|
 
-| CopyOnWriteArrayList     | Thread-safe list                       | Safe for concurrent reads/writes, slow on frequent updates     |
-| Collections.synchronizedSet() | Thread-safe set                  | Wraps any Set (e.g., HashSet) to make it thread-safe           |
-| ConcurrentHashMap        | Thread-safe map (modern)               | High-performance, non-blocking access for multi-threaded env   |
-| Collections.synchronizedMap() | Thread-safe map (legacy)         | Locks entire map; slower and less scalable than ConcurrentHashMap |
++-------------------------------+----------------------------+--------------------------------------------------------------+
+| Collection                    | Type                       | Why It's Suitable                                             |
++-------------------------------+----------------------------+--------------------------------------------------------------+
+| CopyOnWriteArrayList          | Thread-safe list           | Safe for concurrent reads/writes, slow on frequent updates   |
++-------------------------------+----------------------------+--------------------------------------------------------------+
+| Collections.synchronizedSet() | Thread-safe set            | Wraps any Set (e.g., HashSet) to make it thread-safe         |
++-------------------------------+----------------------------+--------------------------------------------------------------+
+| ConcurrentHashMap             | Thread-safe map (modern)   | High-performance, non-blocking access for multi-threaded env |
++-------------------------------+----------------------------+--------------------------------------------------------------+
+| Collections.synchronizedMap() | Thread-safe map (legacy)   | Locks entire map; slower and less scalable than ConcurrentHashMap |
++-------------------------------+----------------------------+--------------------------------------------------------------+
 
 
 93.What is singleton class and how we can make a class singleton?
@@ -227,11 +234,8 @@ Collections:
 Collections is a utility class present in java.util.package. It defines several utility staticmethods like sorting and searching which is used to operate on collection.
 
 101.) Explain Collection hierarchy? Explain List, Set and Queue?
-Collection
-Map List Set
-Queue
-Priority Queue
-Hashmap Arraylist Linkedlist Treeset Hashset LinkedHashset
+Collection Map List Set Queue Priority Queue Hashmap Arraylist Linkedlist Treeset Hashset LinkedHashset
+
 1) List: - list is an interface.
 List follows insertion order. It consist of duplicate elements. To use list interface we can use three classes.
 i. Arraylist
@@ -241,13 +245,19 @@ ii. Linkedlist
 We can use linkedList if there is no continuous memory of location. Adding data is easier than arraylist.it divided into 2 types – i)single LinkedList , ii)Double LinkedList.
 iii. vector
 It work same as array but it is synchronized and give lower performance than ArrayList
+
 2) Set : Set interface doesn’t follow any insertion order and can’t contain duplicate element.
-We can use set interface by 2 classes. i.Hashset
+We can use set interface by 2 classes. 
+i.Hashset
 It uses hashtable internally.it contains only unique element. It is synchronized and it doesn’t
-permit null element. It is the parent class of LinkedHashSet. LinkedHashSet use for remove duplicate element from an array. ii.Treeset
+permit null element. It is the parent class of LinkedHashSet. LinkedHashSet use for remove duplicate element from an array. 
+
+ii.Treeset
 It is use for sort data in ascending order.
 3) Queue:-
-Queue is the parent interface of priority queue. Priority queue is follows FIFO(first in first out) order for adding and removing data. 102. Difference between ArrayList vs LinkedList and Vector?
+Queue is the parent interface of priority queue. Priority queue is follows FIFO(first in first out) order for adding and removing data. 
+
+102. Difference between ArrayList vs LinkedList and Vector?
 ArrayList stores in continuous memory location where LinkedList doesn’t required a
 continuous memory location. ArrayList is non-synchronized where vector is Synchronized
 
@@ -269,13 +279,20 @@ It internally uses hashtable. It uses hashcode of the key object and this hashco
 It is a situation where two or more key objects produce the same final hash value. Toovercome it each bucket consist of linkedlist in it.
 
 106. Difference between synchronized hashmap and concurrent hashmap?
-Synchronized hashmap
-concurrent hashmap
-synchronized but slower than concurrent hashmap
-synchronized but faster
-than synchronized hashmap
-It locks whole map
-It locks some portion of map
+Use ConcurrentHashMap for multi-threaded performance;
+use Synchronized HashMap only for simple, low-concurrency cases.
+🔒 Synchronized HashMap:
+It locks the entire map for every operation.
+Only one thread can access it at a time.
+It's slower and less efficient in multi-threaded environments.
+Created using: Collections.synchronizedMap(new HashMap<>()).
+
+⚙️ ConcurrentHashMap:
+It locks only parts (segments) of the map.
+Multiple threads can read and write safely at the same time.
+It is faster and highly scalable.
+Built for high-concurrency use.
+
 
 107. What is Ternary operator with example?
 Comparable
@@ -304,7 +321,6 @@ List iterator is child interface of iterator.
 Iterator travel in one direction having method next(), hasNext(). List Iterator travel in both direction having method previous(), hasPrevious(),next(), hasNext().
 
 112. What is Fail fast and fail safe?
-An association defines a relationship
-between two entity objects based on common attributes. The relationship can be one-to-one or one-to-many.
+An association defines a relationship between two entity objects based on common attributes. The relationship can be one-to-one or one-to-many.
 
 
