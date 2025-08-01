@@ -1,17 +1,63 @@
 other refrence = https://harshwillblog.hashnode.dev/learning-java-collection-framework?source=more_articles_bottom_blogs
 
-| Collection               | When to Use                            | Why It's Suitable                                         |
-|--------------------------|----------------------------------------|-----------------------------------------------------------|
-| ArrayList                | Need order + fast access               | Maintains insertion order and allows random access        |
-| LinkedList               | Frequent insert/delete                 | Faster insert/delete at both ends or middle               |
-| HashSet                  | Uniqueness required                    | Removes duplicates, offers fast lookup                    |
-| TreeSet                  | Sorted + unique elements               | Automatically keeps elements sorted and unique            |
-| HashMap                  | Key-value lookup                       | Fast access by key, no guaranteed order                   |
-| LinkedHashMap            | Maintain key insertion order           | Remembers insertion order of keys                         |
-| TreeMap                  | Sorted map by key                      | Keys are stored in natural or custom sorted order         |
-| ArrayDeque / LinkedList  | FIFO queue behavior                    | Supports add/remove at both ends, queue operations        |
-| PriorityQueue            | Priority-based processing              | Retrieves elements based on priority                      |
 
+94. What is Collection framework?
+The Collection Framework in Java is a set of interfaces and classes that help manage groups of objects efficiently.
+It includes data structures like List, Set, Queue, and Map and provides powerful features for sorting, searching, and manipulating data.
+
+🔹 Major Interfaces in Collection Framework:
+| Interface   | Description                                                                 |
+|-------------|-----------------------------------------------------------------------------|
+| Collection  | Root interface for most data structures (List, Set, Queue)                 |
+| List        | Ordered collection (e.g., ArrayList, LinkedList)                           |
+| Set         | No duplicate elements (e.g., HashSet, TreeSet)                             |
+| Queue       | For holding elements before processing (e.g., PriorityQueue)               |
+| Map         | Key-value pairs (not part of Collection but part of the framework)         |
+
+
+✅ Structure of Java Collection Framework
+
+                 Collection (Interface)                                                
+                      |
+      ------------------------------------------            
+      |                    |                   |
+     List                Set                Queue
+      |                   |                   |
+ArrayList,           HashSet,          PriorityQueue,
+LinkedList,          LinkedHashSet,    ArrayDeque
+Vector               TreeSet
+
+           Map (Interface)
+                 |
+    ------------------------------------
+    |                |                |
+  HashMap     LinkedHashMap       TreeMap
+    |
+Hashtable (legacy)
+
+
++--------------------------+----------------------------------------+-----------------------------------------------------------+--------------------------------------------------------+
+| Collection               | When to Use                            | Why It's Suitable    strengths                                     | Weakness                                               |
+
++--------------------------+----------------------------------------+-----------------------------------------------------------+--------------------------------------------------------+
+| ArrayList                | Need order + fast access               | Maintains insertion order and allows random access        | Slow insertion/deletion in the middle                 |
++--------------------------+----------------------------------------+-----------------------------------------------------------+--------------------------------------------------------+
+| LinkedList               | Frequent insert/delete                 | Faster insert/delete at both ends or middle               | Slower random/index-based access                      |
++--------------------------+----------------------------------------+-----------------------------------------------------------+--------------------------------------------------------+
+| HashSet                  | Uniqueness required                    | Removes duplicates, offers fast lookup                    | No order, no index access, one null element only       |
++--------------------------+----------------------------------------+-----------------------------------------------------------+--------------------------------------------------------+
+| TreeSet                  | Sorted + unique elements               | Automatically keeps elements sorted and unique            | Slower than HashSet, no null elements                 |
++--------------------------+----------------------------------------+-----------------------------------------------------------+--------------------------------------------------------+
+| HashMap                  | Key-value lookup                       | Fast access by key, no guaranteed order                   | No key ordering, allows only one null key             |
++--------------------------+----------------------------------------+-----------------------------------------------------------+--------------------------------------------------------+
+| LinkedHashMap            | Maintain key insertion order           | Remembers insertion order of keys                         | Slightly slower than HashMap                          |
++--------------------------+----------------------------------------+-----------------------------------------------------------+--------------------------------------------------------+
+| TreeMap                  | Sorted map by key                      | Keys are stored in natural or custom sorted order         | No null keys, slower than HashMap                     |
++--------------------------+----------------------------------------+-----------------------------------------------------------+--------------------------------------------------------+
+| ArrayDeque / LinkedList  | FIFO queue behavior                    | Supports add/remove at both ends, queue operations        | Not thread-safe, no random access                     |
++--------------------------+----------------------------------------+-----------------------------------------------------------+--------------------------------------------------------+
+| PriorityQueue            | Priority-based processing              | Retrieves elements based on priority                      | Order not maintained during iteration, no nulls       |
++--------------------------+----------------------------------------+-----------------------------------------------------------+--------------------------------------------------------+
 
 |-------------------------- Thread-Safe Collections Start Below ---------------------------|
 
@@ -52,40 +98,6 @@ public class Singleton {
     }
 }
 
-
-94. What is Collection framework?
-The Collection Framework in Java is a set of interfaces and classes that help manage groups of objects efficiently.
-It includes data structures like List, Set, Queue, and Map and provides powerful features for sorting, searching, and manipulating data.
-
-🔹 Major Interfaces in Collection Framework:
-| Interface   | Description                                                                 |
-|-------------|-----------------------------------------------------------------------------|
-| Collection  | Root interface for most data structures (List, Set, Queue)                 |
-| List        | Ordered collection (e.g., ArrayList, LinkedList)                           |
-| Set         | No duplicate elements (e.g., HashSet, TreeSet)                             |
-| Queue       | For holding elements before processing (e.g., PriorityQueue)               |
-| Map         | Key-value pairs (not part of Collection but part of the framework)         |
-
-
-✅ Structure of Java Collection Framework
-
-                 Collection (Interface)                                                
-                      |
-      ------------------------------------------            
-      |                    |                   |
-     List                Set                Queue
-      |                   |                   |
-ArrayList,           HashSet,          PriorityQueue,
-LinkedList,          LinkedHashSet,    ArrayDeque
-Vector               TreeSet
-
-           Map (Interface)
-                 |
-    ------------------------------------
-    |                |                |
-  HashMap     LinkedHashMap       TreeMap
-    |
-Hashtable (legacy)
 
 
 public class CollectionFrameworkFullDemo {
