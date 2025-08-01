@@ -1,0 +1,162 @@
+
+93.What is singleton class and how we can make a class singleton?
+A Singleton class in Java is a class that allows only one object (instance) to be created throughout the program.
+It is used when you want to ensure that only one instance of a class exists globally — for example, in logging, configuration, or DB connection managers.
+🔸 Steps to Make a Singleton Class:
+Make the constructor private
+– So no other class can create an object directly.
+
+Create a private static instance of the class
+– This holds the only object.
+
+Provide a public static method to get the instance
+– This method returns the single object, and creates it if it doesn’t exist.
+
+public class Singleton {
+    // Step 2: private static instance
+    private static Singleton instance;
+
+    // Step 1: private constructor
+    private Singleton() {
+        // private to prevent instantiation
+    }
+
+    // Step 3: public method to get the instance
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton(); // lazy initialization
+        }
+        return instance;
+    }
+}
+
+
+94. What is Collection framework?
+The Collection Framework in Java is a set of interfaces and classes that help manage groups of objects efficiently.
+It includes data structures like List, Set, Queue, and Map and provides powerful features for sorting, searching, and manipulating data.
+
+🔹 Major Interfaces in Collection Framework:
+| Interface   | Description                                                                 |
+|-------------|-----------------------------------------------------------------------------|
+| Collection  | Root interface for most data structures (List, Set, Queue)                 |
+| List        | Ordered collection (e.g., ArrayList, LinkedList)                           |
+| Set         | No duplicate elements (e.g., HashSet, TreeSet)                             |
+| Queue       | For holding elements before processing (e.g., PriorityQueue)               |
+| Map         | Key-value pairs (not part of Collection but part of the framework)         |
+
+
+✅ Structure of Java Collection Framework
+
+                   java.util.Collection (Interface)
+                          /     |      \
+                         /      |       \
+                    List       Set      Queue
+                     |          |         |
+           ArrayList, LinkedList  HashSet, TreeSet  PriorityQueue, ArrayDeque
+
+                    java.util.Map (Not part of Collection but part of collection framework)
+                             |
+                    HashMap, TreeMap, LinkedHashMap
+
+
+95. What are wrapper classes?
+
+96. What is cloning?
+
+97. What is hash code and equal method?
+
+
+99. Difference between Collection and Collections?
+Collection:
+Collection is a interface present in java. util.package. It is used to represent a group ofindividual objects as a single unit.
+The List, Set, and Queue are the main sub-interfaces of the collection interface.
+The add(), remove(), clear(), size(), and contains() are the important methods of theCollection interface.
+Collections:
+Collections is a utility class present in java.util.package. It defines several utility staticmethods like sorting and searching which is used to operate on collection.
+
+101.) Explain Collection hierarchy? Explain List, Set and Queue?
+Collection
+Map List Set
+Queue
+Priority Queue
+Hashmap Arraylist Linkedlist Treeset Hashset Linked
+Hashset
+1) List: - list is an interface.
+List follows insertion order. It consist of duplicate elements. To use list interface we can use three classes.
+i. Arraylist
+The ArrayList class is a resizable array, which can be found in the java.util
+package.it is internally work like a dynamic array.
+ii. Linkedlist
+We can use linkedList if there is no continuous memory of location. Adding data is easier than arraylist.it divided into 2 types – i)single LinkedList , ii)Double LinkedList.
+iii. vector
+It work same as array but it is synchronized and give lower performance than ArrayList
+2) Set : Set interface doesn’t follow any insertion order and can’t contain duplicate element.
+We can use set interface by 2 classes. i.Hashset
+It uses hashtable internally.it contains only unique element. It is synchronized and it doesn’t
+permit null element. It is the parent class of LinkedHashSet. LinkedHashSet use for remove duplicate element from an array. ii.Treeset
+It is use for sort data in ascending order.
+3) Queue:-
+Queue is the parent interface of priority queue. Priority queue is follows FIFO(first in first out) order for adding and removing data. 102. Difference between ArrayList vs LinkedList and Vector?
+ArrayList stores in continuous memory location where LinkedList doesn’t required a
+continuous memory location. ArrayList is non-synchronized where vector is Synchronized
+
+103. Explain HashSet and HashMap?.
+HashMap
+HashSet
+Data stores as key-value pair.
+Data stores as object.
+synchronized
+Non-synchronized
+Doesn’t allow duplicate element
+It contains single null key and multiplenull values.
+It is slower than hashSet
+Faster than HashMap.
+Implement of set interface
+Implement of map interface.
+
+104. Internal working of HashMap?
+It internally uses hashtable. It uses hashcode of the key object and this hashcode used to findindex of the bucket.
+
+105. What is Collision and how to overcome this?
+It is a situation where two or more key objects produce the same final hash value. Toovercome it each bucket consist of linkedlist in it.
+
+106. Difference between synchronized hashmap and concurrent hashmap?
+Synchronized hashmap
+concurrent hashmap
+synchronized but slower than concurrent hashmap
+synchronized but faster
+than synchronized hashmap
+It locks whole map
+It locks some portion of map
+
+107. What is Ternary operator with example?
+Comparable
+comparator
+1) Comparable provides a single sorting sequence. In other words, we can sort the
+The Comparator provides multiple sorting sequences. In other words, we
+collection on the basis of a single element such as id, name, and price.
+can sort the collection on the basis of multiple elements such as id, name, and price etc.
+
+108. What are unary operators and its example?
+109.Enumeration
+Iterator
+Only consist read()
+Have both methods remove(), read()
+Access only vector and hashtable
+Access any class in collection.
+
+110. What are association and its type?
+The ternary operator is an operator that exists in some programming languages, whichtakes three operands rather than the typical one or two that most operators use.
+Ex:- < ,> ,? ,==
+
+111. Difference between Iterator and List Iterator?
+which takes one operands i.e. single input it is use to incrementor decrement value.
+ex:- ++, --
+List iterator is child interface of iterator.
+Iterator travel in one direction having method next(), hasNext(). List Iterator travel in both direction having method previous(), hasPrevious(),next(), hasNext().
+
+112. What is Fail fast and fail safe?
+An association defines a relationship
+between two entity objects based on common attributes. The relationship can be one-to-one or one-to-many.
+
+
