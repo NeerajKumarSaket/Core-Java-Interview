@@ -107,6 +107,117 @@ public class Singleton {
 
 
 
+95. What are wrapper classes?
+
+96. What is cloning?
+
+97. What is hash code and equal method?
+
+
+99. Difference between Collection and Collections?
+Collection:
+Collection is a interface present in java.util.package. It is used to represent a group ofindividual objects as a single unit.
+The List, Set, and Queue are the main sub-interfaces of the collection interface.
+The add(), remove(), clear(), size(), and contains() are the important methods of theCollection interface.
+
+Collections:
+Collections is a utility class present in java.util.package. It defines several utility staticmethods like sorting and searching which is used to operate on collection.
+
+101.) Explain Collection hierarchy? Explain List, Set and Queue?
+Collection Map List Set Queue Priority Queue Hashmap Arraylist Linkedlist Treeset Hashset LinkedHashset
+
+1) List: - list is an interface.
+List follows insertion order. It consist of duplicate elements. To use list interface we can use three classes.
+i. Arraylist
+The ArrayList class is a resizable array, which can be found in the java.util
+package.it is internally work like a dynamic array.
+ii. Linkedlist
+We can use linkedList if there is no continuous memory of location. Adding data is easier than arraylist.it divided into 2 types – i)single LinkedList , ii)Double LinkedList.
+iii. vector
+It work same as array but it is synchronized and give lower performance than ArrayList
+
+2) Set : Set interface doesn’t follow any insertion order and can’t contain duplicate element.
+We can use set interface by 2 classes. 
+i.Hashset
+It uses hashtable internally.it contains only unique element. It is synchronized and it doesn’t
+permit null element. It is the parent class of LinkedHashSet. LinkedHashSet use for remove duplicate element from an array. 
+
+ii.Treeset
+It is use for sort data in ascending order.
+3) Queue:-
+Queue is the parent interface of priority queue. Priority queue is follows FIFO(first in first out) order for adding and removing data. 
+
+102. Difference between ArrayList vs LinkedList and Vector?
+ArrayList stores elements in contiguous memory locations, offers fast random access, but is not synchronized.
+Whereas, LinkedList does not require contiguous memory, stores data as nodes with pointers, and is better for frequent insertions and deletions, but is also not synchronized.
+While, Vector is similar to ArrayList in structure and access speed, but it is synchronized, making it thread-safe but slower in performance.
+
+103. Explain HashSet and HashMap?.
+HashMap                                        |--| HashSet
+-----------------------------------------------|--|-----------------------------------------------
+Stores data as key-value pairs                 |--| Stores data as unique objects (no key-value)
+Implements Map interface                       |--| Implements Set interface
+Allows one null key and multiple null values   |--| Allows one null element only
+Not synchronized by default                    |--| Not synchronized by default
+Generally slower due to key-value structure    |--| Generally faster for simple membership tests
+Used when mapping keys to values is needed     |--| Used when only uniqueness of elements is required
+
+
+104. Internal working of HashMap?
+It internally uses hashtable. It uses hashcode of the key object and this hashcode used to find index of the bucket.
+✅ HashMap internally uses an array of buckets and computes the index using the key’s hashCode(), storing entries with chaining (LinkedList or Tree) and handling collisions using equals().
+
+105. What is Collision and how to overcome this?
+It is a situation where two or more key objects produce the same final hash value. To overcome it each bucket consist of linkedlist in it.
+Java handles this using chaining (linked list or tree) inside each bucket to store multiple entries.
+
+106. Difference between synchronized hashmap and concurrent hashmap?
+Use ConcurrentHashMap for multi-threaded performance;
+use Synchronized HashMap only for simple, low-concurrency cases.
+🔒 Synchronized HashMap:
+It locks the entire map for every operation.
+Only one thread can access it at a time.
+It's slower and less efficient in multi-threaded environments.
+Created using: Collections.synchronizedMap(new HashMap<>()).
+
+⚙️ ConcurrentHashMap:
+It locks only parts (segments) of the map.
+Multiple threads can read and write safely at the same time.
+It is faster and highly scalable.
+Built for high-concurrency use.
+
+
+107. What is Ternary operator with example?
+Comparable
+comparator
+1) Comparable provides a single sorting sequence. In other words, we can sort the
+The Comparator provides multiple sorting sequences. In other words, we
+collection on the basis of a single element such as id, name, and price.
+can sort the collection on the basis of multiple elements such as id, name, and price etc.
+
+108. What are unary operators and its example?
+109.Enumeration
+Iterator
+Only consist read()
+Have both methods remove(), read()
+Access only vector and hashtable
+Access any class in collection.
+
+110. What are association and its type?
+The ternary operator is an operator that exists in some programming languages, whichtakes three operands rather than the typical one or two that most operators use.
+Ex:- < ,> ,? ,==
+
+111. Difference between Iterator and List Iterator?
+which takes one operands i.e. single input it is use to incrementor decrement value.
+ex:- ++, --
+List iterator is child interface of iterator.
+Iterator travel in one direction having method next(), hasNext(). List Iterator travel in both direction having method previous(), hasPrevious(),next(), hasNext().
+
+112. What is Fail fast and fail safe?
+An association defines a relationship between two entity objects based on common attributes. The relationship can be one-to-one or one-to-many.
+
+
+113. code exm of list
 public class CollectionFrameworkFullDemo {
 
     public static void main(String[] args) {
@@ -127,7 +238,7 @@ public class CollectionFrameworkFullDemo {
         linkedList.add("Cat");
         linkedList.add("Dog"); // duplicates allowed
         System.out.println("LinkedList (allows duplicates, ordered): " + linkedList);
-
+    
         System.out.println("--------------------------------------------------------");
 
         // 🔹 2. SET INTERFACE IMPLEMENTATIONS 🔹
@@ -215,112 +326,5 @@ public class CollectionFrameworkFullDemo {
 }
 
 
-
-95. What are wrapper classes?
-
-96. What is cloning?
-
-97. What is hash code and equal method?
-
-
-99. Difference between Collection and Collections?
-
-Collection:
-Collection is a interface present in java.util.package. It is used to represent a group ofindividual objects as a single unit.
-The List, Set, and Queue are the main sub-interfaces of the collection interface.
-The add(), remove(), clear(), size(), and contains() are the important methods of theCollection interface.
-
-Collections:
-Collections is a utility class present in java.util.package. It defines several utility staticmethods like sorting and searching which is used to operate on collection.
-
-101.) Explain Collection hierarchy? Explain List, Set and Queue?
-Collection Map List Set Queue Priority Queue Hashmap Arraylist Linkedlist Treeset Hashset LinkedHashset
-
-1) List: - list is an interface.
-List follows insertion order. It consist of duplicate elements. To use list interface we can use three classes.
-i. Arraylist
-The ArrayList class is a resizable array, which can be found in the java.util
-package.it is internally work like a dynamic array.
-ii. Linkedlist
-We can use linkedList if there is no continuous memory of location. Adding data is easier than arraylist.it divided into 2 types – i)single LinkedList , ii)Double LinkedList.
-iii. vector
-It work same as array but it is synchronized and give lower performance than ArrayList
-
-2) Set : Set interface doesn’t follow any insertion order and can’t contain duplicate element.
-We can use set interface by 2 classes. 
-i.Hashset
-It uses hashtable internally.it contains only unique element. It is synchronized and it doesn’t
-permit null element. It is the parent class of LinkedHashSet. LinkedHashSet use for remove duplicate element from an array. 
-
-ii.Treeset
-It is use for sort data in ascending order.
-3) Queue:-
-Queue is the parent interface of priority queue. Priority queue is follows FIFO(first in first out) order for adding and removing data. 
-
-102. Difference between ArrayList vs LinkedList and Vector?
-ArrayList stores in continuous memory location where LinkedList doesn’t required a
-continuous memory location. ArrayList is non-synchronized where vector is Synchronized
-
-103. Explain HashSet and HashMap?.
-HashMap                                        |--| HashSet
------------------------------------------------|--|-----------------------------------------------
-Stores data as key-value pairs                 |--| Stores data as unique objects (no key-value)
-Implements Map interface                       |--| Implements Set interface
-Allows one null key and multiple null values   |--| Allows one null element only
-Not synchronized by default                    |--| Not synchronized by default
-Generally slower due to key-value structure    |--| Generally faster for simple membership tests
-Used when mapping keys to values is needed     |--| Used when only uniqueness of elements is required
-
-
-104. Internal working of HashMap?
-It internally uses hashtable. It uses hashcode of the key object and this hashcode used to findindex of the bucket.
-
-105. What is Collision and how to overcome this?
-It is a situation where two or more key objects produce the same final hash value. Toovercome it each bucket consist of linkedlist in it.
-
-106. Difference between synchronized hashmap and concurrent hashmap?
-Use ConcurrentHashMap for multi-threaded performance;
-use Synchronized HashMap only for simple, low-concurrency cases.
-🔒 Synchronized HashMap:
-It locks the entire map for every operation.
-Only one thread can access it at a time.
-It's slower and less efficient in multi-threaded environments.
-Created using: Collections.synchronizedMap(new HashMap<>()).
-
-⚙️ ConcurrentHashMap:
-It locks only parts (segments) of the map.
-Multiple threads can read and write safely at the same time.
-It is faster and highly scalable.
-Built for high-concurrency use.
-
-
-107. What is Ternary operator with example?
-Comparable
-comparator
-1) Comparable provides a single sorting sequence. In other words, we can sort the
-The Comparator provides multiple sorting sequences. In other words, we
-collection on the basis of a single element such as id, name, and price.
-can sort the collection on the basis of multiple elements such as id, name, and price etc.
-
-108. What are unary operators and its example?
-109.Enumeration
-Iterator
-Only consist read()
-Have both methods remove(), read()
-Access only vector and hashtable
-Access any class in collection.
-
-110. What are association and its type?
-The ternary operator is an operator that exists in some programming languages, whichtakes three operands rather than the typical one or two that most operators use.
-Ex:- < ,> ,? ,==
-
-111. Difference between Iterator and List Iterator?
-which takes one operands i.e. single input it is use to incrementor decrement value.
-ex:- ++, --
-List iterator is child interface of iterator.
-Iterator travel in one direction having method next(), hasNext(). List Iterator travel in both direction having method previous(), hasPrevious(),next(), hasNext().
-
-112. What is Fail fast and fail safe?
-An association defines a relationship between two entity objects based on common attributes. The relationship can be one-to-one or one-to-many.
 
 
