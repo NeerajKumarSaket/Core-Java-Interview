@@ -131,7 +131,8 @@ public class Singleton {
     }
 }
 
-
+Ques- HashMap vs ConcurrentHashMap ?
+"HashMap is faster but unsafe for multithreading, while ConcurrentHashMap is thread-safe and optimized for concurrent read-write operations."
 
 95. What are wrapper classes?
 
@@ -139,7 +140,6 @@ public class Singleton {
 
 97 What is equals() and hashCode()  method?
 The equals() method checks whether two objects are logically equal by comparing their contents, not just their memory references. It is typically overridden to define what makes two objects equal (e.g., same name and ID).
-
 The hashCode() method returns an integer hash value for an object, which is used by hash-based collections like HashMap and HashSet to efficiently store and retrieve objects.
 
 
