@@ -73,7 +73,9 @@ Hashtable (legacy)
 | Collections.synchronizedMap() | Thread-safe map (legacy)   | Locks entire map; slower and less scalable than ConcurrentHashMap |
 +-------------------------------+----------------------------+--------------------------------------------------------------+
 
-Type-Safe Collections
+“Generics make collections type-safe by restricting the data type at compile time, reducing bugs and avoiding type casting.”
+
+Type-Safe Collections:
 Definition: Use generics (Java 5+) to enforce specific data types at compile-time.
 Examples: ArrayList<String>, HashMap<Integer, String>, HashSet<Double>.
 Advantages:
@@ -82,8 +84,9 @@ example-
 List<String> list = new ArrayList<>();
 list.add("Hello"); // OK
 // list.add(123); // Compile-time error
-Non-Type-Safe Collections
 
+
+Non-Type-Safe Collections:
 Definition: Raw collections (pre-Java 5) that allow any object type.
 Examples:
 ArrayList list = new ArrayList(); // Non-type-safe
@@ -94,10 +97,8 @@ Disadvantages:
 Risk of ClassCastException at runtime.
 Requires manual casting.
 Messy, error-prone code.
-
-
 Usage: Rare, only in legacy code. Avoid in modern apps.
-Example:
+
 
 93.What is singleton class and how we can make a class singleton?
 A Singleton class in Java is a class that allows only one object (instance) to be created throughout the program.
@@ -136,7 +137,10 @@ public class Singleton {
 
 96. What is cloning?
 
-97. What is hash code and equal method?
+97 What is equals() and hashCode()  method?
+The equals() method checks whether two objects are logically equal by comparing their contents, not just their memory references. It is typically overridden to define what makes two objects equal (e.g., same name and ID).
+
+The hashCode() method returns an integer hash value for an object, which is used by hash-based collections like HashMap and HashSet to efficiently store and retrieve objects.
 
 
 99. Difference between Collection and Collections?
