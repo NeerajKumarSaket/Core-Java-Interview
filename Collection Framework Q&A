@@ -135,6 +135,18 @@ Ques- HashMap vs ConcurrentHashMap ?
 "HashMap is faster but unsafe for multithreading, while ConcurrentHashMap is thread-safe and optimized for concurrent read-write operations."
 
 95. What are wrapper classes?
+Wrapper classes are special classes in Java that wrap primitive data types into objects, allowing them to be used where objects are required — such as in collections, generics, and method arguments.
+Primitive Type	Wrapper Class
+byte              	Byte
+short	              Short
+int               	Integer
+
+int num = 10;
+// Wrapping primitive into object (Boxing)
+Integer obj = Integer.valueOf(num);
+// Unwrapping back to primitive (Unboxing)
+int value = obj.intValue();
+
 
 96. What is cloning?
 
