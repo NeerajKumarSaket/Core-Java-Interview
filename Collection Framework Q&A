@@ -73,6 +73,31 @@ Hashtable (legacy)
 | Collections.synchronizedMap() | Thread-safe map (legacy)   | Locks entire map; slower and less scalable than ConcurrentHashMap |
 +-------------------------------+----------------------------+--------------------------------------------------------------+
 
+Type-Safe Collections
+Definition: Use generics (Java 5+) to enforce specific data types at compile-time.
+Examples: ArrayList<String>, HashMap<Integer, String>, HashSet<Double>.
+Advantages:
+Prevents runtime type errors.,No manual casting needed.,Cleaner, safer code.
+example-
+List<String> list = new ArrayList<>();
+list.add("Hello"); // OK
+// list.add(123); // Compile-time error
+Non-Type-Safe Collections
+
+Definition: Raw collections (pre-Java 5) that allow any object type.
+Examples:
+ArrayList list = new ArrayList(); // Non-type-safe
+list.add("Hello");
+list.add(123); // No compile-time error
+String s = (String) list.get(1); // Runtime error (ClassCastException)
+Disadvantages:
+Risk of ClassCastException at runtime.
+Requires manual casting.
+Messy, error-prone code.
+
+
+Usage: Rare, only in legacy code. Avoid in modern apps.
+Example:
 
 93.What is singleton class and how we can make a class singleton?
 A Singleton class in Java is a class that allows only one object (instance) to be created throughout the program.
