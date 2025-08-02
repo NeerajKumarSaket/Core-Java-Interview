@@ -149,6 +149,7 @@ int value = obj.intValue();
 
 
 96. What is cloning?
+Cloning is the process of creating an exact copy of an object in memory using the clone() method defined in the Object class.
 
 97 What is equals() and hashCode()  method?
 The equals() method checks whether two objects are logically equal by comparing their contents, not just their memory references. It is typically overridden to define what makes two objects equal (e.g., same name and ID).
