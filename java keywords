@@ -13,7 +13,7 @@ Example:
 final int MAX = 100;
 final class A {} // cannot be subclassed
 
-3. "What does this refer to in Java? When do you typically use it?"
+3. What does "this" refer to in Java? When do you typically use it?
   this refers to the current object. It’s used to resolve naming conflicts between instance variables and parameters, or to invoke other constructors.
 
 4 What is the use of super ?"
