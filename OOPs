@@ -25,7 +25,7 @@ Let’s explore each one with simple examples.
 1. Class and Object in Java
 
 What is a Class in Java?
-A class in Java is a user-defined blueprint or prototype for creating objects. It contains variables (attributes) and methods (functions) that define the behavior of the objects.
+A class in Java is a user-defined blueprint or prototype for creating objects. It contains variables (attributes) and methods that define the behavior of the objects.
 Syntax:
 class Person {
     String name;
@@ -63,9 +63,8 @@ Question : Can we Override static methods?
 ########################################
 ================================================================Encapsulation===============================================================
 3) What is Encapsulation ?
-Encapsulation is the process of binding data and the methods that manipulate that data together, while keeping both safe from outside interference and misuse.
-OR
-Encapsulation is about protecting the data of a class by declaring its variables private and exposing them through public getter/setter methods. It promotes data hiding and secure code.
+Encapsulation is the process of bundling data (variables) and the methods that operate on that data into a single unit (class) while restricting direct access to the data.
+This is typically achieved by declaring variables as private and providing controlled access through public getter and setter methods, thereby ensuring data hiding and maintaining code security.
 
 This is done using:
 Private variables
