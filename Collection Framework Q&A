@@ -15,7 +15,14 @@ It includes data structures like List, Set, Queue, and Map and provides powerful
 | Map         | Key-value pairs (not part of Collection but part of the framework)         |
 
 
-✅ Structure of Java Collection Framework
+✅ Structure of Java Collection Framework( Collection API)
+API (Application Programming Interface) → A set of classes, interfaces, and methods provided to perform specific tasks.
+
+Key Interview Points
+Collections is an interface in java.util → part of Java Collections API.
+It defines general methods: add(), remove(), size(), iterator().
+Map is separate because it works with key-value pairs, not just a group of elements.
+Iterable is the parent of Collection — gives the ability to loop with for-each.
 
                  Collection (Interface)                                                
                       |
