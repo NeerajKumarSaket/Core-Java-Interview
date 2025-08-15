@@ -315,6 +315,68 @@ It can also have constructors, instance variables, and any type of method (stati
 A class extends an abstract class using the extends keyword.
 Only one abstract class can be extended by a subclass (does not support multiple inheritance).
 
+// Abstract class: Represents a generic concept of a Vehicle
+abstract class Vehicle {
+
+    // Abstract method: No body here → subclasses MUST provide an implementation
+    abstract void start();
+
+    // Concrete method: Already has an implementation → can be used directly or overridden
+    void fuelUp() {
+        System.out.println("Refueling vehicle...");
+    }
+
+    // Concrete method: Shared functionality
+    void stop() {
+        System.out.println("Vehicle stopped.");
+    }
+}
+
+// Concrete subclass: Car
+class Car extends Vehicle {
+
+    // Providing implementation for abstract method 'start'
+    @Override
+    void start() {
+        System.out.println("Car started with a key ignition.");
+    }
+}
+
+// Another concrete subclass: Bike
+class Bike extends Vehicle {
+
+    // Providing implementation for abstract method 'start'
+    @Override
+    void start() {
+        System.out.println("Bike started with a self-start button.");
+    }
+}
+
+// Main class to run the example
+public class AbstractClassExample {
+    public static void main(String[] args) {
+
+        // We cannot create objects of an abstract class directly:
+        // Vehicle v = new Vehicle(); // ❌ Compilation error
+
+        // Creating Car object
+        Vehicle myCar = new Car();
+        myCar.start();   // Calls Car's implementation
+        myCar.fuelUp();  // Uses Vehicle's implementation
+        myCar.stop();    // Uses Vehicle's implementation
+
+        System.out.println("----");
+
+        // Creating Bike object
+        Vehicle myBike = new Bike();
+        myBike.start();  // Calls Bike's implementation
+        myBike.fuelUp(); // Uses Vehicle's implementation
+        myBike.stop();   // Uses Vehicle's implementation
+    }
+}
+
+
+
 | Method           | What it hides                        | Can it have method body?   |
 | ---------------- | ------------------------------------ | -------------------------- |
 | `Abstract Class` | Partially hides implementation       | Yes (some methods)         |
@@ -355,6 +417,7 @@ Example: super() calls the superclass constructor.
 
 16) What is the role of this keyword in Java?
 Answer:Refers to the current instance of the class. Useful to resolve ambiguity between instance variables and parameters.
+Static methods cannot use this or access instance variables directly.
 
 17) What is method hiding in Java?
 Answer:If a subclass defines a static method with the same signature as in parent class, it is called method hiding.
