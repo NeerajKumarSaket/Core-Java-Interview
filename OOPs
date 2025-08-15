@@ -296,7 +296,7 @@ iv) Return Type – Overloading can have different return types if parameters di
 v) Access Modifiers – Overloading allows any access modifier, whereas Overriding cannot use a more restrictive access modifier than the superclass method.
 vi) Static/Final Methods – Overloading can be applied to static or final methods, whereas Overriding cannot override static or final methods.
 
-If you want, I can now compre
+
 
 12) Difference between interface & abstract class? or What is an Interface and how is it different from Abstract Class?
 -------------------------------------------------
@@ -319,6 +319,13 @@ Only one abstract class can be extended by a subclass (does not support multiple
 | ---------------- | ------------------------------------ | -------------------------- |
 | `Abstract Class` | Partially hides implementation       | Yes (some methods)         |
 | `Interface`      | Fully hides implementation (usually) | No (Java 7 no body), Yes (Java 8+) |
+
+📌 Key Differences (Interview Quick Points)
+Multiple Inheritance – Interface supports multiple inheritance, whereas Abstract class does not.
+Variables – In an interface, variables are public static final by default, whereas in an abstract class, variables can be of any type with any access modifier.
+Method Body – In interfaces (till Java 7) methods cannot have a body; from Java 8, they can have default and static methods with a body, whereas abstract classes can always have both abstract and concrete methods.
+Purpose – An interface defines a contract (capabilities to be implemented), whereas an abstract class defines partial implementation along with shared code.
+Inheritance Type – A class uses implements for an interface, whereas it uses extends for an abstract class.
 
 
 13) Explain Aggregation with an example?
