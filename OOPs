@@ -289,10 +289,14 @@ public class TestVehicle {
 ✔️ This small program demonstrates abstraction, inheritance, and polymorphism together.
 
 11) Difference between Overloading and Overriding?
-Feature	Overloading	Overriding
-Definition	Same method name, different params	Same method signature, subclass
-Compile-time/Runtime	Compile-time	Runtime
-Example	add(int, int) vs. add(double, double)	toString() in Object class overridden in custom class
+i) Definition – Overloading means same method name but different parameter lists in the same class, whereas Overriding means same method signature in subclass to redefine behavior.
+ii) Binding Time – Overloading is resolved at compile time (compile-time polymorphism), whereas Overriding is resolved at runtime (runtime polymorphism).
+iii) Inheritance Requirement – Overloading does not require inheritance, whereas Overriding always requires inheritance.
+iv) Return Type – Overloading can have different return types if parameters differ, whereas Overriding must have the same return type (or covariant).
+v) Access Modifiers – Overloading allows any access modifier, whereas Overriding cannot use a more restrictive access modifier than the superclass method.
+vi) Static/Final Methods – Overloading can be applied to static or final methods, whereas Overriding cannot override static or final methods.
+
+If you want, I can now compre
 
 12) Difference between interface & abstract class? or What is an Interface and how is it different from Abstract Class?
 -------------------------------------------------
