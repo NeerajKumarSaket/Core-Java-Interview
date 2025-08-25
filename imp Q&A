@@ -87,9 +87,17 @@ A static variable means one shared copy across all objects, often used for count
 Static classes can only be nested, and they are tied to the outer class itself, not its objects
 
 
-Ques.10) 
+Ques.10)Can we use @PostMapping instead of @GetMapping?
+Technically yes → you can send data in the body of a POST request and return something.
+But practically no → because it violates REST principles:
+GET = read only
+POST = create/submit
 
-
+Ques 11) New Features in Java 17 as Compare to Java 8?
+Security and Ecosystem: Java 17 offers updated security features, deprecates older APIs (e.g., SecurityManager), and ensures compatibility with modern libraries, unlike Java 8, which lacks these updates.
+Java 17 has records, text blocks, and switch expressions, which reduce boilerplate code.
+It adds pattern matching and sealed classes for safer, cleaner type handling.
+Java 17 offers better APIs and garbage collectors compared to Java 8.
 
 
 
