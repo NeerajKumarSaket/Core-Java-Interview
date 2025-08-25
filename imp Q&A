@@ -63,6 +63,40 @@ class Dog extends Animal {
 }
 Java supports single, multilevel, and hierarchical inheritance but not multiple inheritance using classes.
 
+9. What is the difference between static methods, static variables, and static classes in Java?
+1. Static Variables
+Definition: A static variable (also called a class variable) is a variable declared with the static keyword. It belongs to the class rather than any specific instance of the class.
+Key Characteristics:
+Shared Across Instances: All instances of the class share the same copy of the static variable. Changes to the variable affect all instances.
+Memory Allocation: Allocated when the class is loaded into memory, and it persists for the lifetime of the program.(e.g., ClassName.variableName)
+
+2. Static Methods
+Definition: A static method is a method declared with the static keyword. It belongs to the class rather than any specific instance.
+Key Characteristics:
+No Instance Required: Can be called using the class name (e.g., ClassName.methodName()) without creating an instance.
+Access Restrictions: Cannot directly access non-static (instance) variables or methods because they require an instance, but they can access static variables and other static methods.
+
+3. Static Classes
+Definition: In Java, a "static class" refers to a nested static class (a class declared with the static keyword inside another class). Top-level classes cannot be static in Java.
+Key Characteristics:
+Nested Static Class: A static nested class is associated with the enclosing class, not with instances of the enclosing class.
+No Outer Instance Required: Unlike non-static (inner) classes, a static nested class does not require an instance of the enclosing class to be instantiated.
+
+Static members belong to the class, not to instances. 
+A static variable means one shared copy across all objects, often used for counters or constants. Static methods are class-level methods, like utility methods in Math, which don’t need an object. 
+Static classes can only be nested, and they are tied to the outer class itself, not its objects
+
+
+Ques.10) 
+
+
+
+
+
+
+
+
+
 ====================================
 Topic ==OOPs
 ===================================
