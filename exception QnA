@@ -1,0 +1,94 @@
+
+1) How to create custom exception in java ?
+Ans- custom exception nothing but user defined exception.
+Exception → for checked exceptions (compile-time).
+RuntimeException → for unchecked exceptions (runtime).
+throw keyword is use to throw user defined exception
+throws → used in method signature to declare checked exceptions.
+
+when we used runtime exception no need to throws keyword if we use compiletime(Exception) then need to throws in method signature.
+
+Steps to Create Custom Exception:
+Create a class that extends Exception (checked) or RuntimeException (unchecked).
+Provide constructors (default and parameterized for custom messages).
+Use the throw keyword to throw the exception.
+If it’s a checked exception, declare it with throws in the method signature.
+
+// Step 1: Create custom checked exception
+class InsufficientBalanceException extends Exception {
+    // Constructor accepts custom message
+    public InsufficientBalanceException(String message) {
+        super(message); // Call parent Exception class constructor
+    }
+}
+
+public class BankAccount {
+    private double balance;
+
+    // Constructor to initialize account with some balance
+    public BankAccount(double initialBalance) {
+        this.balance = initialBalance;
+    }
+
+    // Method to withdraw money
+    // throws keyword is required because it's a checked exception
+    public void withdraw(double amount) throws InsufficientBalanceException {
+        if (amount > balance) {
+            // Step 2: Throw custom exception if insufficient balance
+            throw new InsufficientBalanceException("Insufficient Balance! Available: " + balance);
+        }
+        balance -= amount;
+        System.out.println("Withdrawal successful! Remaining Balance: " + balance);
+    }
+
+    public static void main(String[] args) {
+        // Step 3: Create account with some balance
+        BankAccount account = new BankAccount(5000);
+
+        try {
+            // Trying to withdraw more than balance
+            account.withdraw(7000);
+        } catch (InsufficientBalanceException e) {
+            // Step 4: Handle custom exception
+            System.out.println("Exception caught: " + e.getMessage());
+        }
+    }
+}
+
+2)unchecked exception(Runtime Exception) 
+
+// Step 1: Create custom unchecked exception
+class InsufficientBalanceRuntimeException extends RuntimeException {
+    public InsufficientBalanceRuntimeException(String message) {
+        super(message);
+    }
+}
+
+public class BankAccountUnchecked {
+    private double balance;
+
+    public BankAccountUnchecked(double initialBalance) {
+        this.balance = initialBalance;
+    }
+
+    // No throws needed since it's RuntimeException
+    public void withdraw(double amount) {
+        if (amount > balance) {
+            // Throw custom runtime exception
+            throw new InsufficientBalanceRuntimeException("Insufficient Balance! Available: " + balance);
+        }
+        balance -= amount;
+        System.out.println("Withdrawal successful! Remaining Balance: " + balance);
+    }
+
+    public static void main(String[] args) {
+        BankAccountUnchecked account = new BankAccountUnchecked(3000);
+
+        // No need to use try-catch (unchecked),
+        // but program will terminate if exception occurs
+        account.withdraw(6000);
+    }
+}
+
+==================================================================================================================================
+
