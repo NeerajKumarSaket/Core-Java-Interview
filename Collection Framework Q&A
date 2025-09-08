@@ -80,8 +80,8 @@ Hashtable (legacy)
 | Collections.synchronizedMap() | Thread-safe map (legacy)   | Locks entire map; slower and less scalable than ConcurrentHashMap |
 +-------------------------------+----------------------------+--------------------------------------------------------------+
 
-“Generics make collections type-safe by restricting the data type at compile time, reducing bugs and avoiding type casting.”
-
+------------Generics-----------------------
+Generics make collections type-safe by restricting the data type at compile time, reducing bugs and avoiding type casting.
 Type-Safe Collections:
 Definition: Use generics (Java 5+) to enforce specific data types at compile-time.
 Examples: ArrayList<String>, HashMap<Integer, String>, HashSet<Double>.
@@ -105,6 +105,19 @@ Risk of ClassCastException at runtime.
 Requires manual casting.
 Messy, error-prone code.
 Usage: Rare, only in legacy code. Avoid in modern apps.
+
+------------------------------------------------------------------------------------
+
+Difference between Map and List Interface ?
+| **Map**                                                                                                                            | **List**                                               |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| ❌ Not part of the Collection interface (but part of the Collections Framework).                                                    | ✅ Part of the Collection interface.                    |
+| Stores data as **key–value pairs**.                                                                                                | Stores data as a **sequence of objects (elements)**.   |
+| Use `put(key, value)` to add entries.                                                                                              | Use `add(element)` to add objects.                     |
+| Keys **cannot** be duplicated, but values **can** be duplicated.                                                                   | Allows **duplicate elements**.                         |
+| Null handling: <br> – `HashMap`: one null key, multiple null values <br> – `Hashtable`: no null key/value                          | Allows **multiple null elements**.                     |
+| Order depends on implementation: <br> – `HashMap`: no order <br> – `LinkedHashMap`: insertion order <br> – `TreeMap`: sorted order | Always **maintains insertion order**.                  |
+| Examples: `HashMap`, `LinkedHashMap`, `TreeMap`, `Hashtable`                                                                       | Examples: `ArrayList`, `LinkedList`, `Vector`, `Stack` |
 
 
 93.What is singleton class and how we can make a class singleton?
