@@ -21,11 +21,10 @@ Four Pillers of oops
 - Polymorphism
 - Abstraction
 
-Let’s explore each one with simple examples.
 1. Class and Object in Java
-
 What is a Class in Java?
 A class in Java is a user-defined blueprint or prototype for creating objects. It contains variables (attributes) and methods that define the behavior of the objects.
+every class have super class by default that is object class in java.
 Syntax:
 class Person {
     String name;
