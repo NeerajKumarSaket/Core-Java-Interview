@@ -1,5 +1,22 @@
+1) What is the super class of all Exception class in java?
+ the superclass of all exception classes is java.lang.Throwable.
+Throwable is the root class for all error and exception types.
+It has two direct subclasses:
+Error → represents serious problems that applications should not try to handle (e.g., OutOfMemoryError, StackOverflowError).
+Exception → represents conditions that applications might want to catch and handle (e.g., IOException, SQLException).
 
-1) How to create custom exception in java ?
+2) What is difference between compile time exception and runtime exception?
+Ans-Compiler Checking
+Compile-time exceptions are checked by the compiler → must handle using try-catch or throws.
+Runtime exceptions are not checked by the compiler → handling is optional.
+When Detected
+Compile-time exceptions → detected before execution (at compile-time).
+Runtime exceptions → detected during program execution.
+Examples
+Compile-time → IOException, SQLException.
+Runtime → NullPointerException, ArithmeticException.
+
+3) How to create custom exception in java ?
 Ans- custom exception nothing but user defined exception.
 Exception → for checked exceptions (compile-time).
 RuntimeException → for unchecked exceptions (runtime).
