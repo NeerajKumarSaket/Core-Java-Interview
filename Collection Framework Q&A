@@ -116,7 +116,7 @@ Difference between Map and List Interface ?
 | Use `put(key, value)` to add entries.                                                                                              | Use `add(element)` to add objects.                     |
 | Keys **cannot** be duplicated, but values **can** be duplicated.                                                                   | Allows **duplicate elements**.                         |
 | Null handling: <br> – `HashMap`: one null key, multiple null values <br> – `Hashtable`: no null key/value                          | Allows **multiple null elements**.                     |
-| Order depends on implementation: <br> – `HashMap`: no order <br> – `LinkedHashMap`: insertion order <br> – `TreeMap`: sorted order | Always **maintains insertion order**.                  |
+| Order depends on implementation: HashMap: no order ,LinkedHashMap: insertion order ,TreeMap: sorted order                          | Always **maintains insertion order**.                  |
 | Examples: `HashMap`, `LinkedHashMap`, `TreeMap`, `Hashtable`                                                                       | Examples: `ArrayList`, `LinkedList`, `Vector`, `Stack` |
 
 
