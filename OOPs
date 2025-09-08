@@ -15,7 +15,7 @@ Clear Design and Maintenance with Abstraction
 
 Main OOP Concepts in Java Tutorial?
 - Class and Object
-Pillers of oops
+Four Pillers of oops
 - Encapsulation
 - Inheritance
 - Polymorphism
@@ -461,9 +461,17 @@ Answer:If no access modifier is specified, the class has default (package-privat
 
 27) What is final keyword in OOP concepts?
 Answer:final can be used with:
-Variables – Makes value constant.
-Methods – Prevents overriding.
-Classes – Prevents inheritance.
+final Variables – Makes value constant you can not change in future.
+final Methods – Prevents overriding you can not override that method.
+final Classes – Prevents inheritance you can not extends that class.
+
+finally->finally is a keyword,its a block we need to use finally with try catch block
+finally block used to closing resources->DB connection close,file close ,session close
+finally block always execute.
+
+finalize-> finalize() is a method (not a keyword) of Object class that is called by the Garbage Collector before destroying an object to allow cleanup. 
+It is not a keyword.
+Deprecated since Java 9 → replaced by try-with-resources or Cleaner API.
 
 28) What is a nested class in Java?
 Answer:A class defined inside another class. Types:
