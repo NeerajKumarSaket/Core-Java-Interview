@@ -106,9 +106,45 @@ Java 17 offers better APIs and garbage collectors compared to Java 8.
 
 
 ====================================
-Topic ==OOPs
-===================================
+TOPIC6:STRING CONCEPT
+1.what is difference between stringbuffer and stringbuilder?
+2.why string buffer?
+3.why string is immutable?what is constant pool?
+4.how to create immutable class?
+5.where string pool is located?
+6.what is string literal?
+7.what is Defference between comparable and comparator?
+8.what is Striing intern?
+9.what is failfast and failsafe?
+10.what is difference between == and .equals?
 
+1.what is difference between stringbuffer and stringbuilder?
+
+🔹 What is Autoboxing?
+Autoboxing is the automatic conversion of a primitive type → its corresponding wrapper class.
+public class AutoBoxingExample {
+    public static void main(String[] args) {
+        int a = 10;
+        Integer b = a;  // autoboxing (int → Integer)
+        System.out.println(b); // Output: 10
+    }
+}
+Here, Java automatically converts the primitive int into an Integer object.
+
+🔹 What is Unboxing?
+The reverse process: Wrapper class → primitive type.
+Example-
+public class UnboxingExample {
+    public static void main(String[] args) {
+        Integer a = 20;
+        int b = a;  // unboxing (Integer → int)
+        System.out.println(b); // Output: 20
+    }
+}
+
+✅ In short:
+Autoboxing = primitive → wrapper.
+Unboxing = wrapper → primitive.
 
 
 
