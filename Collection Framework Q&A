@@ -115,7 +115,7 @@ Difference between Map and List Interface ?
 | Stores data as **key–value pairs**.                                                                                                | Stores data as a **sequence of objects (elements)**.   |
 | Use `put(key, value)` to add entries.                                                                                              | Use `add(element)` to add objects.                     |
 | Keys **cannot** be duplicated, but values **can** be duplicated.                                                                   | Allows **duplicate elements**.                         |
-| Null handling: <br> – `HashMap`: one null key, multiple null values <br> – `Hashtable`: no null key/value                          | Allows **multiple null elements**.                     |
+| Null handling: – HashMap: one null key, multiple null values – `Hashtable`: no null key/value                                      | Allows **multiple null elements**.                     |
 | Order depends on implementation: HashMap: no order ,LinkedHashMap: insertion order ,TreeMap: sorted order                          | Always **maintains insertion order**.                  |
 | Examples: `HashMap`, `LinkedHashMap`, `TreeMap`, `Hashtable`                                                                       | Examples: `ArrayList`, `LinkedList`, `Vector`, `Stack` |
 
@@ -162,7 +162,7 @@ short	              Short
 int               	Integer
 
 int num = 10;
-// Wrapping primitive into object (Boxing)
+// Wrapping primitive into object (auto-Boxing)
 Integer obj = Integer.valueOf(num);
 // Unwrapping back to primitive (Unboxing)
 int value = obj.intValue();
