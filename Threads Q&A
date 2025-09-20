@@ -101,5 +101,8 @@ o Abnormal termination: It occurs when some unusual events such as an unhandled 
 Synchronization in Java is used to prevent multiple threads from accessing shared resources at the same time, 
 ensuring data consistency and thread safety during concurrent execution.
 
-
+85 What happens when multiple threads access the same resource?
+👉 “When multiple threads access the same resource without proper synchronization, race conditions can occur, leading to inconsistent or corrupted data.
+To avoid this, we use synchronization mechanisms (like synchronized, locks, or concurrent classes) so that only one thread accesses the resource at a time. 
+This ensures thread-safety but may impact performance due to blocking.”
 
