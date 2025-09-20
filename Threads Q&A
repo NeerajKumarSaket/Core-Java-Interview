@@ -106,3 +106,11 @@ ensuring data consistency and thread safety during concurrent execution.
 To avoid this, we use synchronization mechanisms (like synchronized, locks, or concurrent classes) so that only one thread accesses the resource at a time. 
 This ensures thread-safety but may impact performance due to blocking.”
 
+what is Deadlock? 
+A deadlock occurs when two or more threads are waiting for each other’s locks, and none of them can proceed. 
+As a result, the threads are stuck forever.
+
+Example:
+Thread 1 locks Resource A → waits for Resource B.
+Thread 2 locks Resource B → waits for Resource A.
+Both keep waiting → deadlock.
