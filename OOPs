@@ -68,8 +68,6 @@ What is the difference between shallow copy and deep copy?
 1)What is Object-Oriented Programming (OOP)?
 Object-Oriented Programming (OOP) is a programming paradigm based on the concept of “objects”, which contain data and behavior. 
 These objects represent real-world entities like cars, books, or students.
-
-Think about your mobile phone. It has properties like brand, model, and color. It also has behaviors like making calls or playing music. In programming, these properties and behaviors are combined to form objects.
 Java is one of the most powerful languages that uses OOP principles to make your programs modular, reusable, and maintainable.
 
 Why Use OOP in Java ? OR What Are the Advantages of Java OOP Concepts ?
@@ -297,7 +295,7 @@ class Cow implements Animal {
 Use abstract classes when some common implementation is shared.
 Use interfaces when you want to enforce a contract without implementation.
 Real-World Analogy:
-Think of a TV remote interface. You press the button (method), but how it works inside (implementation) is hidden from you.
+Think of a TV remote interface. You press the button (method), but how it works inside (implementation in class) is hidden from you.
 
 10) Can we Inherit Constructor ?
 Answer: NO, We cannot inherit constructor
@@ -376,6 +374,7 @@ Multiple interfaces can be implemented by a single class (supports multiple inhe
 
 ✅ Abstract Class
 An abstract class is a partially implemented class that can contain both abstract methods (without body) and concrete methods (with body).
+// We cannot create objects of an abstract class directly:
 It can also have constructors, instance variables, and any type of method (static, final, private, etc.).
 A class extends an abstract class using the extends keyword.
 Only one abstract class can be extended by a subclass (does not support multiple inheritance).
@@ -504,6 +503,7 @@ Answer:When overriding a method, the return type of the overriding method can be
 21)Constructor Chaining?
 ---------------------
 -> When we call one constructor from another constructor it will form chain like flow structure. This is called as constructor chaining
+Constructor chaining refers to calling one constructor from another within the same class using this() or from parent class using super().
 -> This can be achieved by using this() keyword or Creating Object in another constructor
 
 
@@ -515,11 +515,8 @@ The class should implement Cloneable interface.
 Answer:Abstract class can have both abstract and concrete methods; interfaces can have default and static methods (from Java 8).
 Interfaces support multiple inheritance; abstract classes don’t.
 
-24) Can we instantiate an abstract class?
+24) Can we instantiate an abstract class?can be create object?
 Answer: No. Abstract classes cannot be instantiated directly. They must be subclassed, and their abstract methods implemented.
-
-25) What is constructor chaining in Java?
-Answer:Constructor chaining refers to calling one constructor from another within the same class using this() or from parent class using super().
 
 26) What is the default access modifier for a class in Java?
 Answer:If no access modifier is specified, the class has default (package-private) access
