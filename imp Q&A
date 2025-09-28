@@ -9,6 +9,7 @@ core java all Questions-
 8. Explain the concept of inheritance in Java.
 9. What is the difference between static methods, static variables, and static classes in Java?
 Ques 11) New Features in Java 17 as Compare to Java 8?
+12. var type variable or dyanamic variable?
 
 =================================================================================================
 Core Java Interview Questions SRC- https://javacody.com/top-60-java-interview-questions/
@@ -107,6 +108,59 @@ Java 17 has records, text blocks, and switch expressions, which reduce boilerpla
 It adds pattern matching and sealed classes for safer, cleaner type handling.
 Java 17 offers better APIs and garbage collectors compared to Java 8.
 
+New type introduced in java version 10
+---------------------------------------
+var type
+#########
+-> This was introduced in java version 10
+-> It gives dynamic datatype concept. Depending on the value stored inside variable, dataype is allocated to it internally
+-> var type can only be local variable.
+Example 1:
+----------
+public class A {
+	
+	public static void main(String[] args) {
+		var x1 = 100;
+		var x2 = 10.3F;
+		var x3 = "mike";
+		var x4 = false;
+		var x5 = new A();
+		var x6 = 'a';
+		
+		System.out.println(x1);
+		System.out.println(x2);
+		System.out.println(x3);
+		System.out.println(x4);
+		System.out.println(x5);
+		System.out.println(x6);
+	}
+}
+Output:
+100
+10.3
+mike
+false
+p1.A@79fc0f2f
+a
+
+-> var type can only be local variable
+-> It cannot be static / non-static variable
+-> It cannot be method argument
+-> It cannot be method return type
+
+Example:
+--------
+public class C {
+	var x1;//Error
+	static var x2;//Error
+	public static void main(String[] args) {
+		var x5 = 100;//Correct
+	}
+	public var test(var x3) {//Error
+		
+	}
+	
+}
 
 
 
