@@ -480,8 +480,12 @@ Answer:Refers to the parent class constructor/method/field.
 Example: super() calls the superclass constructor.
 
 16) What is the role of this keyword in Java?
-Answer:Refers to the current instance of the class. Useful to resolve ambiguity between instance variables and parameters.
-Static methods cannot use this or access instance variables directly.
+Answer:Refers to the current instance of the class means hold's current object address that is executing.
+-> this keyword is a special reference variable that hold's object's address.
+-> Using this keyword we can access non-static members of the class
+-> Useful to resolve ambiguity between instance variables and parameters.
+->Static methods cannot use this or access instance variables directly.
+-> Using this() keyword we can call a constructor
 
 17) What is method hiding in Java?
 Answer:If a subclass defines a static method with the same signature as in parent class, it is called method hiding.
