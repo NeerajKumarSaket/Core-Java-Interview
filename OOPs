@@ -25,7 +25,7 @@ What is Method Overriding (Runtime Polymorphism)?
 Abstraction
 What is Abstraction? OR How to achieve Abstraction in Java?
 When to use Abstract Class vs Interface?
-Can we inherit constructor?
+Questions : Can we inherit constructor?
 
 Comparison Questions
 What is the difference between Overloading and Overriding?
@@ -122,7 +122,11 @@ Syntax to create object:
 ClassName variableName = new ClassName();
 ################################################
 Question : Can we Override static methods?
--> We cannot override static methods, as we cannot inherit static methods
+-> We cannot override static methods.
+Questions  : Why static methods can't be overridden.
+-> Static methods belong to the class, not the instance.
+-> Therefore, they are resolved at compile time, not at runtime.
+-> This means there’s no dynamic dispatch for static methods.
 ########################################
 ================================================================Encapsulation===============================================================
 3) What is Encapsulation ?
