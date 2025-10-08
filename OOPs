@@ -2,68 +2,67 @@ OOP Concepts in Java Tutorial Ref---> https://javacody.com/oop-concepts-in-java-
 
 Core OOP Basics
 
-What is Object-Oriented Programming (OOP)?
-Why use OOP in Java? OR What are the advantages of Java OOP concepts?
-What are the main OOP concepts in Java?
-What is a Class in Java?
-What is an Object in Java?
-Can we override static methods?
+What is Object-Oriented Programming (OOP)?*****
+Why use OOP in Java? OR What are the advantages of Java OOP concepts?*****
+What are the main OOP concepts in Java?*****
+What is a Class in Java?*****
+What is an Object in Java?*****
+Can we override static methods?*****
 
 Encapsulation
-What is Encapsulation?
-Why is Encapsulation important?
+What is Encapsulation?*****
+Why is Encapsulation important?*****
 
 Inheritance
-What is Inheritance?
-Why is multiple inheritance not supported in Java?
+What is Inheritance?*****
+Why is multiple inheritance not supported in Java?*****
 
 Polymorphism
-What is Polymorphism?
-What is Method Overloading (Compile-time Polymorphism)?
-What is Method Overriding (Runtime Polymorphism)?
+What is Polymorphism?*****
+What is Method Overloading (Compile-time Polymorphism)?*****
+What is Method Overriding (Runtime Polymorphism)?*****
 
 Abstraction
-What is Abstraction? OR How to achieve Abstraction in Java?
-When to use Abstract Class vs Interface?
-Questions : Can we inherit constructor?
+What is Abstraction? OR How to achieve Abstraction in Java?*****
+When to use Abstract Class vs Interface?*****
+Questions : Can we inherit constructor?*****
 
 Comparison Questions
-What is the difference between Overloading and Overriding?
-What is an Interface and how is it different from Abstract Class?
+What is the difference between Overloading and Overriding?*****
+What is an Interface and how is it different from Abstract Class?*****
 
 Advanced OOP Concepts
-Explain Aggregation with an example.
-Can you explain the SOLID principles in relation to OOP in Java?
-What is the role of the super keyword in Java?
-What is the role of this keyword in Java?
-What is method hiding in Java?
-Explain Constructor Overloading.
-Can we override a static method in Java?
-What is Covariant Return Type?
-What is Constructor Chaining?
-What is Object Cloning?
-What is the difference between an abstract class and an interface in Java 8?
-Can we instantiate an abstract class?
-What is constructor chaining in Java?
-What is the default access modifier for a class in Java?
-Final / Finally / Finalize
-What is final keyword in OOP concepts?
-What is finally in Java?
-What is finalize() in Java?
-Nested & Special Cases
-What is a nested class in Java?
-Can a constructor be overridden in Java?
-What is multiple inheritance and how does Java solve it?
-What is diamond problem in OOP and how does Java handle it?
-What is the purpose of instanceof in Java?
-Relationships (Association, Aggregation, Composition)
-What is Association in Java?
-What is Composition in Java?
-What is Aggregation in Java?
-What is Single Inheritance in Java?
+Explain Aggregation with an example.*****
+Can you explain the SOLID principles in relation to OOP in Java?*****
+What is the role of the super keyword in Java?*****
+What is the role of this keyword in Java?*****
+What is method hiding in Java?*****
+Explain Constructor Overloading.*****
+Can we override a static method in Java?*****
+What is Covariant Return Type?*****
+What is Constructor Chaining?*****
+What is Object Cloning?*****
+What is the difference between an abstract class and an interface in Java 8?*****
+Can we instantiate an abstract class?*****
+What is the default access modifier for a class in Java?*****
+Final / Finally / Finalize*****
+What is final keyword in OOP concepts?*****
+What is finally in Java?*****
+What is finalize() in Java?*****
+Nested & Special Cases*****
+What is a nested class in Java?*****
+Can a constructor be overridden in Java?*****
+What is multiple inheritance and how does Java solve it?*****
+What is diamond problem in OOP and how does Java handle it?*****
+What is the purpose of instanceof in Java?*****
+Relationships (Association, Aggregation, Composition)*****
+What is Association in Java?*****
+What is Composition in Java?*****
+What is Aggregation in Java?*****
+What is Single Inheritance in Java?*****
 
 Copying Objects
-What is the difference between shallow copy and deep copy?
+What is the difference between shallow copy and deep copy?*****
 =================================================================================================================
 1)What is Object-Oriented Programming (OOP)?
 Object-Oriented Programming (OOP) is a programming paradigm based on the concept of “objects”, which contain data and behavior. 
@@ -123,6 +122,7 @@ ClassName variableName = new ClassName();
 ################################################
 Question : Can we Override static methods?
 -> We cannot override static methods.
+
 Questions  : Why static methods can't be overridden.
 -> Static methods belong to the class, not the instance.
 -> Therefore, they are resolved at compile time, not at runtime.
